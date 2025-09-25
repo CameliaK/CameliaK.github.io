@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit 1. Defining Discourse Analysis</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+
+    <!-- Font & UI kits (same stack as other pages) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Existing styles -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/activities.css" />
+    <link rel="stylesheet" href="styles/unit1.css" />
+    <link rel="stylesheet" href="styles/general-information.css" />
+    <link rel="stylesheet" href="styles/presentacion-horizontal.css" />
+
+
+    <!-- New unit-specific styles -->
+    <link rel="stylesheet" href="styles/unit1.1.css" />
+    <script src="js/modernizr.custom.79639.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/notes.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Alternancia escritorio/móvil para el recurso de notas -->
+    <style>
+      /* Por defecto (pantallas grandes): muestra escritorio, oculta móvil */
+      .escritorio {
+        display: block !important;
+      }
+      .movil {
+        display: none !important;
+      }
+
+      /* En pantallas chicas: muestra móvil, oculta escritorio */
+      @media (max-width: 991.98px) {
+        .escritorio {
+          display: none !important;
+        }
+        .movil {
+          display: block !important;
+        }
+      }
+
+      /* 3 notas en una fila (grid de Boxlayout) */
+      .contentmenu {
+        position: relative;
+        height: 300px;
+      }
+      .bl-main.bl-3up > figure {
+        width: 33.3333%;
+        height: 100%;
+        top: 0;
+      }
+      .bl-main.bl-3up > figure:nth-child(1) {
+        left: 0;
+      }
+      .bl-main.bl-3up > figure:nth-child(2) {
+        left: 33.3333%;
+      }
+      .bl-main.bl-3up > figure:nth-child(3) {
+        left: 66.6666%;
+      }
+      .bl-main.bl-3up > figure .bl-content {
+        max-height: calc(100% - 40px);
+        overflow: auto;
+      }
+      @media (max-width: 991.98px) {
+        .contentmenu {
+          height: 600px;
+        }
+        .bl-main.bl-3up > figure {
+          width: 100%;
+          height: 33.333%;
+          left: 0;
+        }
+        .bl-main.bl-3up > figure:nth-child(1) {
+          top: 0;
+        }
+        .bl-main.bl-3up > figure:nth-child(2) {
+          top: 33.333%;
+        }
+        .bl-main.bl-3up > figure:nth-child(3) {
+          top: 66.666%;
+        }
+      }
+      /* Expandido al 100% cuando se abre */
+      .bl-main.bl-3up > figure.bl-expand,
+      .bl-main.bl-3up.bl-expand-item > figure.bl-expand {
+        width: 100% !important;
+        height: 100% !important;
+        left: 0 !important;
+        top: 0 !important;
+      }
+      .bl-main.bl-3up > figure.bl-expand .bl-content {
+        max-height: calc(100% - 40px);
+        overflow: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+      <h1 class="font__generic">
+            <span class="bold">Unit 1.</span> Defining Discourse Analysis
+      </h1>
+      <p class="sr-only">Unit 1. Defining Discourse Analysis</p>
+      <p class="sr-only">Unit 1. Defining Discourse Analysis</p>
+
+    <div class="sr-only" lang="es">
+        <p>
+            Para acceder a la información de ayuda de esta Experiencia Educativa en <i lang="en">Windows</i> presiona
+            las teclas Alt + i, en <i lang="en">MacOS</i> presiona las teclas <i lang="en">Control</i> + <i
+                lang="en">Option</i> + i
+            Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
+            en <i lang="en">MacOS</i> presiona la tecla Esc
+        </p>
+
+        <p>
+            Para navegar dentro de la Experiencia Educativa, utiliza los siguientes atajos:
+        </p>
+
+        <p class="mb-0" lang="en"><b>Windows</b></p>
+        <ul class="ml-4">
+            <li>Abrir menú principal: Alt + M</li>
+            <li>Cerrar menú principal: Alt + C</li>
+        </ul>
+
+        <p class="mb-0" lang="en"><b>MacOS</b></p>
+
+        <ul class="ml-4">
+            <li>Abrir menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+            <li>Cerrar menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+        </ul>
+    </div>
+<!-- Contenedor Botón ayuda -->
+    <div class=" visible-solo-escritorio container-help" aria-hidden="true">
+        <button accesskey="i" class="help  animate__animated animate__bounceIn animate-bounceIn animate__slower
+            waves-effect waves-light" data-toggle="modal" data-target="#methods-help" tabindex="-1">
+            <img class="w-100" src="./images/help/info-A02.png" alt="Support image">
+        </button>
+    </div>
+    <!-- Side menu button -->
+    <button
+      accesskey="M"
+      type="button"
+      class="btn btn-info js-sidebar__collapse sidebar__collapse"
+      aria-pressed="false"
+      aria-expanded="false"
+      aria-label="Expand side menu"
+    >
+      <span>Menu</span><span aria-hidden="true">&nbsp;&nbsp;</span
+      ><i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar nav -->
+    <navbar class="sidebar" role="navigation" aria-label="Menu" name="Menu">
+      <div class="sidebar__encabezado">
+        <button
+          accesskey="C"
+          aria-details="Close side menu"
+          class="btn btn-link sidebar__dismiss"
+        >
+          <i class="fas fa-arrow-right sidebar__icono"></i
+          ><span class="sr-only">Close navigation menu</span>
+        </button>
+      </div>
+      <menu-component></menu-component>
+      <div class="sidebar__encabezado">
+        <button
+          aria-details="Cerrar menú lateral de navegación"
+          class="btn btn-link sidebar__dismiss"
+        >
+          <i aria-hidden="true" class="fas fa-arrow-right sidebar__icono"></i>
+          <span class="sr-only">Close navigation menu</span>
+        </button>
+      </div>
+    </navbar>
+
+    <!-- Header -->
+    <header>
+        <div style="z-index: 500;" class="fixed-top encabezado">
+            <div class="container visible-solo-escritorio">
+                <span class=" pleca__encabezado " aria-hidden="true">
+                    Unit 1. Defining Discourse Analysis
+                </span>
+            </div>
+
+            <div class="container visible-solo-movil">
+                <p class="mb-0" aria-hidden="true">
+                    <span class="pleca__encabezado">Unit 1</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenido-principal container">
+
+      <br aria-hidden="true" /><br aria-hidden="true" />
+
+      <!-- Seccion 1, Imagen  -->
+      <div >
+        <div class="visible-solo-escritorio mb-2rem">
+          <img
+            src="images/Unit1/DA-U1-03.png"
+            aria-hidden="true"
+            style="width: 60%"
+            class="img-full"
+            alt="Support image"
+          />
+        </div>
+        <div class="visible-solo-movil mb-4">
+          <img
+            src="images/Unit1/DA-U1-03.png"
+            aria-hidden="true"
+            style="width: 100%"
+            alt="Support image - movil"
+          />
+        </div>
+        
+      </div>
+
+
+      <!-- Seccion 1, titulo -->
+
+ 
+      
+      <!-- Seccion 2, Introduccion -->
+      <section class="seccion">
+        <h2 class="mb-2rem bold title__generic">Introduction</h2>
+        <p>
+          In this unit, you will study the definitions and applications of
+          discourse. You will learn about the differences between spoken and
+          written discourse, and begin to understand the implications of this
+          discipline in language learning and teaching.
+        </p>
+
+        <h2 class="mb-2rem bold title__generic">Objectives</h2>
+        <p class="mb-0">In this unit, you will:</p>
+        <ul class="pl-1_3 mb-2rem">
+          <li>
+            Study the definitions of discourse and Discourse Analysis (DA)
+          </li>
+          <li>
+            Learn about the differences between spoken and written discourse
+          </li>
+          <li>Identify the characteristics of spoken discourse</li>
+          <li>Identify the characteristics of written discourse</li>
+          <li>
+            Explore the implications of DA in language learning and teaching
+          </li>
+        </ul>
+
+        <h2 class="mb-2rem title__generic bold">Contents</h2>
+        <ul style="list-style: none; padding-left: 0">
+          <li>
+            1.1 What is discourse?
+            <ul style="list-style: none">
+              <li>1.1.1 Spoken discourse</li>
+              <li>1.1.2 Written discourse</li>
+            </ul>
+          </li>
+          <li>1.2 What is discourse analysis?</li>
+        </ul>
+      </section>
+
+      <hr class="separador-principal" aria-hidden="true" />
+
+      <!-- Seccion 3, Unit1.1 intro -->
+      
+      <!-- Intro -->
+      <section class="seccion" >
+        <h2 class="second__title mb-2rem second__title title__orange bold">
+        <span><b>Unit 1.1</b></span> What is discourse?
+        </h2>
+        <p>
+          Before moving on to discourse analysis, we need to understand what
+          discourse refers to. However, this concept is very complex to define,
+          so the first thing to bear in mind is that usually a definition of
+          discourse is attached to the author’s method or approach to analyze
+          it. To begin with, we will address discourse from general
+          perspectives, so let’s look into the following authors’ conceptions.
+        </p>
+
+        <hr class="separador-principal" aria-hidden="true" />
+
+        <!-- Seccion 4, Notas -->
+        <section class="section">
+          <div class="container mt-5 mb-5">
+            <h3 class="bold third__title color__blue">Discourse definition</h3>
+            <p class="parrafo instruccion-color-verde escritorio">
+              <b>Instrucción:</b>Press the buttons to access the
+              information.
+            </p>
+
+            <!-- Versión escritorio (grid expandible) -->
+            <div class="contentmenu escritorio">
+              <div id="bl-main" class="bl-main bl-3up">
+                <!-- CARD 1 -->
+                <figure>
+                  <div class="bl-box">
+                    <img
+                      src="images/Unit1/DA-U1-04.png"
+                      class="img-caja"
+                      alt="imagen de apoyo"
+                      aria-hidden="true"
+                    />
+                    <hr aria-hidden="true" />
+                    <p class="parrafo bl-icon-about"><b>Gee (1996)</b></p>
+                  </div>
+                  <div class="bl-content">
+                    <div class="row">
+                      <div class="col-md-8 columnas-box">
+                        <p class="parrafo">
+                          For Gee (1996), Discourse (with a capital D) is “a
+                          socially accepted association among ways of using
+                          language, other symbolic expressions, and ‘artifacts,’
+                          of thinking, feeling, believing, valuing, and acting
+                          that can be used to identify oneself as a member of a
+                          socially meaningful group or ‘social network,’ or to
+                          signal (that one is playing) a socially meaningful
+                          ‘role’” (p.131). In other words, discourse should be
+                          conceived as a social practice embracing not only what
+                          can be done with the language in real life but also
+                          mental and emotional elements that influence these oral
+                          interactions.
+                        </p>
+                      </div>
+                      <div
+                        class="col-md-4 text-xs-right text-center"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="images/Unit1/DA-U1-04.png"
+                          class="img-responsive"
+                          alt="imagen de apoyo - movil"
+                        />
+                        <hr aria-hidden="true" />
+                        <p class="parrafo">Gee (1996)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="bl-icon bl-icon-close" aria-hidden="true">
+                    <i class="fa fa-times"></i><span class="sr-only">Cerrar</span>
+                  </button>
+                </figure>
+
+                <!-- CARD 2 -->
+                <figure>
+                  <div class="bl-box">
+                    <img
+                      src="images/Unit1/DA-U1-05.png"
+                      class="img-caja"
+                      alt="imagen de apoyo"
+                      aria-hidden="true"
+                    />
+                    <hr aria-hidden="true" />
+                    <p class="parrafo bl-icon-about"><b>Thornbury (2005)</b></p>
+                  </div>
+                  <div class="bl-content">
+                    <div class="row">
+                      <div class="col-md-8 columnas-box">
+                        <p class="parrafo">
+                          Put more simply, Thornbury (2005, p. 7) states that
+                          “discourse is the way that language – either spoken or
+                          written – is used for communicative effect in a
+                          real-world situation”. Hence, anything that can be said
+                          or written to communicate intended meanings can be
+                          considered discourse, highlighting its functional and
+                          purposeful use in authentic contexts to achieve a
+                          specific goal or reaction, which is its core pragmatic
+                          function.
+                        </p>
+                      </div>
+                      <div
+                        class="col-md-4 text-xs-right text-center"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="images/Unit1/DA-U1-05.png"
+                          class="img-responsive"
+                          alt="imagen de apoyo - movil"
+                        />
+                        <hr aria-hidden="true" />
+                        <p class="parrafo">Thornbury (2005)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="bl-icon bl-icon-close" aria-hidden="true">
+                    <i class="fa fa-times"></i><span class="sr-only">Cerrar</span>
+                  </button>
+                </figure>
+
+                <!-- CARD 3 -->
+                <figure>
+                  <div class="bl-box">
+                    <img
+                      src="images/Unit1/DA-U1-06.png"
+                      class="img-caja"
+                      alt="imagen de apoyo"
+                      aria-hidden="true"
+                    />
+                    <hr aria-hidden="true" />
+                    <p class="parrafo bl-icon-about"><b>Alsaawi (2016)</b></p>
+                  </div>
+                  <div class="bl-content">
+                    <div class="row">
+                      <div class="col-md-8 columnas-box">
+                        <p class="parrafo">
+                          Alsaawi (2016, p. 19), entails tangible examples of what
+                          discourse can ‘look like’: “discourse can be either
+                          written, such as in books, essays, newspapers,
+                          magazines, road signs or invoices, or spoken, such as in
+                          conversations, verbal interactions and TV programmes”.
+                          This perspective primarily focuses on the observable
+                          products and physical manifestations of language,
+                          categorizing them by their modality to provide a
+                          concrete and accessible understanding of the linguistic
+                          phenomenon in everyday life, listing its common forms
+                          and mediums.
+                        </p>
+                      </div>
+                      <div
+                        class="col-md-4 text-xs-right text-center"
+                        aria-hidden="true"
+                      >
+                        <img
+                          src="images/Unit1/DA-U1-06.png"
+                          class="img-responsive"
+                          alt="imagen de apoyo - movil"
+                        />
+                        <hr aria-hidden="true" />
+                        <p class="parrafo">Alsaawi (2016)</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="bl-icon bl-icon-close" aria-hidden="true">
+                    <i class="fa fa-times"></i><span class="sr-only">Cerrar</span>
+                  </button>
+                </figure>
+              </div>
+            </div>
+
+            <!-- Versión móvil (lineal) -->
+            <div class="movil mt-4 mb-4">
+              <div class="">
+                <div class="text-center">
+                  <img
+                    src="images/Unit1/DA-U1-04.png"
+                    class="img-caja"
+                    alt="imagen de apoyo"
+                    aria-hidden="true"
+                  />
+                  <p class="parrafo bl-icon-about">Gee (1996)</p>
+                </div>
+                <p class="parrafo">
+                  For Gee (1996), Discourse (with a capital D) is “a socially accepted association among ways of using language, other symbolic expressions, and ‘artifacts,’ of thinking, feeling, believing, valuing, and acting that can be used to identify oneself as a member of a socially meaningful group or ‘social network,’ or to signal (that one is playing) a socially meaningful ‘role’” (p.131).  In other words, discourse should be conceived as a social practice embracing not only what can be done with the language in real life but also mental and emotional elements that influence these oral interactions. 
+                </p>
+              </div>
+              <hr class="separador-movil" aria-hidden="true" />
+              <div>
+                <div class="text-center">
+                  <img
+                    src="images/Unit1/DA-U1-05.png"
+                    class="img-caja"
+                    alt="imagen de apoyo"
+                    aria-hidden="true"
+                  />
+                  <p class="parrafo bl-icon-about">Thornbury (2005)</p>
+                </div>
+                <p class="parrafo">
+                  Put more simply, Thornbury (2005, p. 7) states that “discourse is the way that language – either spoken or written – is used for communicative effect in a real-world situation”. Hence, anything that can be said or written to communicate intended meanings can be considered discourse, highlighting its functional and purposeful use in authentic contexts to achieve a specific goal or reaction, which is its core pragmatic function.
+                </p>
+              </div>
+              <hr class="separador-movil" aria-hidden="true" />
+              <div>
+                <div class="text-center">
+                  <img
+                    src="images/Unit1/DA-U1-06.png"
+                    class="img-caja"
+                    alt="imagen de apoyo"
+                    aria-hidden="true"
+                  />
+                  <p class="parrafo bl-icon-about">Alsaawi  (2016)</p>
+                </div>
+                <p class="parrafo">
+                  Alsaawi (2016, p. 19), entails tangible examples of what discourse can ‘look like’: “discourse can be either written, such as in books, essays, newspapers, magazines, road signs or invoices, or spoken, such as in conversations, verbal interactions and TV programmes”. This perspective primarily focuses on the observable products and physical manifestations of language, categorizing them by their modality to provide a concrete and accessible understanding of the linguistic phenomenon in everyday life, listing its common forms and mediums.
+                </p>
+              </div>
+              <hr class="separador-movil" aria-hidden="true" />
+            </div>
+          </div>
+
+          <div class="u11-note">
+            <p class="mb-0">
+              As you can see, the term discourse involves two main mediums, spoken and written, and one main hallmark, society. Therefore, the way discourse interacts with people is through its mediums (we can also add digital discourse – see Crystal, 2013 – which contains characteristics of both and more) and the element that influences them is the social interactions in a specific context. 
+            </p>
+          </div>
+        </section>
+
+        <hr class="separador-principal" aria-hidden="true"/>
+      
+      <!-- Seccion 5, Video y foro1 -->
+        <p class="u11-section-title fake-h4" aria-hidden="true">Discourse definition</p>
+        <p class="parrafo instruccion-color-verde escritorio">
+            <b>Instrucción:</b> Press the buttons to access the
+            information.
+        </p>
+
+        <!-- Vídeo -->
+        <div class="u11-video-wrapper">
+          <div class="embed-responsive embed-responsive-16by9 u11-video mb-4">
+            <video class="embed-responsive-item" controls>
+            <source src="videos/Unit1.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento <code>video</code>.
+          </video>
+          </div>
+
+        <!-- Botón / Script (colapsable) -->
+        <button
+          class="u11-script-btn mt-3 mb-4 visible-solo-escritorio"
+          data-toggle="collapse"
+          data-target="#u11-script"
+          aria-expanded="false"
+          aria-controls="u11-script">
+          Script <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+
+        <!-- Botón SOLO MÓVIL: descarga el .docx (no colapsa nada) -->
+        <a
+          class="u11-script-btn u11-script-download mt-3 mb-4 visible-solo-movil"
+          href="downloads/DA/DA-U1-Script-What is Discourse.docx"
+          download>
+          Download script<i class="fa fa-download" aria-hidden="true"></i>
+        </a>
+        <div id="u11-script" class="collapse u11-script" aria-live="polite">
+          <p class="mb-0">
+            <b>What is Discourse?</b><br>
+            Communication involves much more than just forming isolated sentences. It is a process where language is used in a complete and purposeful way. In linguistics, this is called discourse, which is defined as a unit of language that is longer than a single sentence and is used in a real-life situation.<br><br>
+
+            While grammar deals with small elements like sounds (phonemes) or parts of words (morphemes), discourse analysis studies how language—wFhether spoken or written—is used in a social setting. This discipline, significantly advanced by the work of linguist Teun van Dijk, examines how larger units of language—such as words, grammar, and crucially, context—combine to give meaning to a conversation or a text.<br><br>
+
+            The central idea is that discourse is entirely dependent on context. Real communication goes beyond the words that are spoken; it includes situational knowledge and background information shared by the speaker and the listener. Therefore, meaning cannot be deduced solely from the words uttered but requires an understanding of the circumstances surrounding the communicative act.<br><br>
+
+            In summary, discourse is the study of language in action, analyzing how it is structured and interpreted in practice, always considering the situation in which it occurs to achieve effective communication.
+
+          </p>
+        </div>
+        </div>
+
+        <!-- Nota con enlace -->
+        <div class="u11-notehint mt-3 mb-4">
+          This video also contains a simple explanation of the term discourse:
+          <a href="https://youtu.be/NEOXg8EAG8k" target="_blank" rel="noopener">“What is a discourse? Discourse meaning explained”.</a>
+        </div>
+
+        <p class="mt-3 mb-4">
+        Before moving on, go to the forum section and participate in
+        <span class="forum-highlight">Forum A. What discourse means…</span>
+        </p>
+
+
+  <!-- Tarjeta del foro -->
+        <div class="ContainerActivity ">
+          <div class="activities ">
+            <div class="actividad-titulo img-foro"><img src="images/help/forum_icon.png" alt="Unit 1 - Activity 01"
+                    aria-hidden="true">
+                <p accesskey="1" tabindex="0" class="mb-0 color__purple" aria-hidden="true" class="fake-h2">
+                  <b>DA Forum A. What discourse means…</b>
+                  <span aria-hidden="true">&nbsp;</span>
+                </p>
+            </div>
+            <p><b>Score:</b> 2.5%</p>
+            <p class="instrucciones mb-0 "><b>Instructions:</b></p>
+            <ol class="mb-0 pl-1_3">
+              <li>Define discourse in your own words:
+                <ol class="pl-1_3 lw-alpha">
+                  <li>How would you explain the concept of "discourse" in simple terms? Propose your own definition.</li>
+                  <li>Provide an example from real life that illustrates your definition.</li>
+                </ol>
+                </li>
+              <li>Thank you for your commitment and group work!</li>
+                <ol class="pl-1_3 lw-alpha">
+                  <li>After sharing your response, read other contributions</li>
+                  <li>Choose at least two and provide constructive feedback.</li>
+                  <ul class="pl-1_3 disc">
+                    <li>Do you agree with their perspective?</li>
+                    <li>Can you add an example or a different insight?</li>
+                  </ul>
+                </ol>    
+            </ol>
+          </div>
+        </div>
+
+      <hr class="separador-principal" aria-hidden="true"/>
+
+      <!-- Seccion 6, Spoen Discourse -->
+      <section class="seccion">
+        <h3 class="bold third__title color__blue">Spoken Discourse</h3>
+          <p>
+              Spoken discourse refers to language that is produced and understood in real-time communicative exchanges. It is usually interactive, dynamic, and influenced by context. It contains features such as turn-taking, pauses, and fillers (e.g., "uh," "you know"), among others. Unlike written discourse, it relies on intonation, body language, and shared knowledge between speakers to convey meaning. As Cornish (2006) mentions: “[it] is the ongoing, situated interpretation of a speaker’s communicative intentions, of which the addressee’s expected and actual reactions are an integral part” (p. 1). 
+          </p>
+        <div class="u11-note">
+          <p class="mb-0">
+            To analyze spoken discourse, we must consider its most prominent characteristics, which are often “related to phonetic (e.g. voicing, pauses) and phonological (e.g. intonation, phonemic differences) features. On the other hand, certain grammatical, lexical and pragmatic features have also been specifically associated with spoken discourse and can therefore not be properly analysed or investigated without the inclusion of spoken data in the analysis” (Ghanem et al., 2024).
+          </p>
+        </div>
+
+        <div class="visible-solo-escritorio mt-5">
+          <img
+            src="images/Unit1/DA-U1-07.png"
+            aria-hidden="true"
+            style="width: 60%"
+            class="img-full"
+            alt="Support image"
+          />
+        </div>
+        <div class="visible-solo-movil mb-5 mt-5">
+          <img
+            src="images/Unit1/DA-U1-07.png"
+            aria-hidden="true"
+            style="width: 100%"
+            alt="Support image - movil"
+          />
+        </div>
+        <p class="parrafo instruccion-color-verde escritorio mt-5">
+            <b>Instrucción:</b> Press the buttons to access the
+            information.
+        </p>
+
+        <div class="mt-5 mb-5">
+
+        <div class="container">
+          <div class="escritorio">                    
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">  
+                <div class="swiper-slide">
+                  <div class="swiper-content">
+                    <p>
+                        Some examples of spoken discourse with distinctive features include: 
+                    </p>    
+                    <ul class="parrafo ml-4">
+                        <li>Telephone calls (business and private)</li>
+                        <li>Service encounters (shops, ticket offices, etc.)</li>
+                        <li>Interviews (jobs, journalistic, in official settings) </li>
+                        <li>Classroom (classes, seminars, lectures, tutorials) </li>
+                        <li>Rituals (church prayers, sermons, weddings) </li>
+                        <li>Monologues (speeches, stories, jokes) </li>
+                        <li>Language-in-action (talk accompanying doing, such as fixing, cooking, assembling, demonstrating, etc.) </li>
+                        <li>Casual conversation (strangers, friends, intimates) </li>
+                        <li>Organizing and directing people (work, home, in the street) </li>
+                    </ul>
+
+                    <p class="parrafo ref-cita">
+                        (McCarthy, 1991, pp. 118-119)
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-content">
+
+                      <p class="parrafo parrafo-intro">
+                          As we will discuss in later Units, there are several techniques to perform discourse analysis on spoken interactions. Some of them are studying turn-taking, analyzing adjacency pairs, exploring repair, identifying discourse markers, among others. For now, consider the following example:
+                      </p>    
+
+                      <p class="parrafo parrafo-prelista">
+                          A conversation between two coworkers
+                      </p>
+                      <ul class="parrafo ml-4">
+                          <li>Randy: Hey, did you finish the report?</li>
+                          <li>Martha: Uh… not yet. I need, like, a few more hours. </li>
+                          <li>Randy: Oh, no worries. The deadline’s tomorrow, right?</li>
+                          <li>Martha: Yeah, but I wanna make sure it’s good, you know?</li>
+                          <li>Randy: Totally. Let me know if you need help.</li>
+                          <li>Martha: Thanks, I appreciate it! </li>
+                      </ul>
+      
+                  </div>
+                </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-content">
+                        <p class="parrafo parrafo-intro">
+                            This is a transcribed conversation that occurred in an office building some months ago. What features can you identify that are specific for spoken discourse? 
+                        </p>    
+                        
+                        <p class="parrafo">
+                            For one, the register is informal. People use fillers like “Uh”, “like”, “you know”, among others, in the flow of the conversation while they think of what to say and how to say it, which is natural. Secondly, the sentences are shorter than they would be, say, if you were writing an email. Moreover, as it is implied from reading the talk, you can guess there are pauses in between the utterances, to make interaction natural. Finally, there are several contractions, which are also characteristic of spoken, casual language.
+                        </p>
+                        
+
+                    </div>
+                  </div>
+              </div>
+              <div class="u11-counter" aria-hidden="true"></div>
+                <div class="contenedor-botones" aria-hidden="true">                                
+                  <div class="swiper-button-prev" aria-hidden="true"><p class="parrafo mb-0">Anterior</p></div>
+                  <div class="swiper-button-next"><p class="parrafo mb-0">Siguiente</p></div>
+              </div>
+            </div>  
+          </div>
+          <div class="movil mt-4 mb-4">
+            <div class="ambientes-aprendizaje">
+              <div class="">
+                <p>
+                    Some examples of spoken discourse with distinctive features include: 
+                </p>    
+                <ul class="parrafo ml-4">
+                    <li>Telephone calls (business and private)</li>
+                    <li>Service encounters (shops, ticket offices, etc.)</li>
+                    <li>Interviews (jobs, journalistic, in official settings) </li>
+                    <li>Classroom (classes, seminars, lectures, tutorials) </li>
+                    <li>Rituals (church prayers, sermons, weddings) </li>
+                    <li>Monologues (speeches, stories, jokes) </li>
+                    <li>Language-in-action (talk accompanying doing, such as fixing, cooking, assembling, demonstrating, etc.) </li>
+                    <li>Casual conversation (strangers, friends, intimates) </li>
+                    <li>Organizing and directing people (work, home, in the street) </li>
+                </ul>
+                <p>
+                    (McCarthy, 1991, pp. 118-119)
+                </p>
+              </div>
+            </div>
+            <div class="ambientes-aprendizaje mt-4">
+                <div class="">
+                    <p class="parrafo parrafo-intro">
+                        As we will discuss in later Units, there are several techniques to perform discourse analysis on spoken interactions. Some of them are studying turn-taking, analyzing adjacency pairs, exploring repair, identifying discourse markers, among others. For now, consider the following example:
+                    </p>    
+                    <p class="parrafo parrafo-prelista">
+                        A conversation between two coworkers
+                    </p>
+                    <ul class="parrafo ml-4">
+                        <li>Randy: Hey, did you finish the report?</li>
+                        <li>Martha: Uh… not yet. I need, like, a few more hours. </li>
+                        <li>Randy: Oh, no worries. The deadline’s tomorrow, right?</li>
+                        <li>Martha: Yeah, but I wanna make sure it’s good, you know?</li>
+                        <li>Randy: Totally. Let me know if you need help.</li>
+                        <li>Martha: Thanks, I appreciate it! </li>
+                    </ul>
+                </div>
+            </div>
+              <div class="ambientes-aprendizaje mt-4">
+                  <div class="">
+
+                      <p class="parrafo parrafo-intro">
+                                      This is a transcribed conversation that occurred in an office building some months ago. What features can you identify that are specific for spoken discourse? 
+                                  </p>    
+                                  
+                                  <p class="parrafo">
+                                      For one, the register is informal. People use fillers like “Uh”, “like”, “you know”, among others, in the flow of the conversation while they think of what to say and how to say it, which is natural. Secondly, the sentences are shorter than they would be, say, if you were writing an email. Moreover, as it is implied from reading the talk, you can guess there are pauses in between the utterances, to make interaction natural. Finally, there are several contractions, which are also characteristic of spoken, casual language.
+                                  </p>
+                      
+                  </div>
+              </div>
+
+          </div>
+
+        </div>
+      </div>
+      </section>
+
+
+      <hr class="separador-principal" aria-hidden="true" />
+
+      <!-- Seccion 7, Written Discourse -->
+      <section class="section">
+        <h3 class="bold third__title color__blue">Written Discourse</h3>
+              <p>
+                  On the other hand, written discourse refers to language that is structured and organized in writing and has a clear purpose and audience in mind. It typically follows grammatical conventions, makes use of different cohesive devices (connectors, pronouns), and has a more planned structure compared to spoken discourse. Moreover, it lacks immediate interaction and relies on textual features to convey meaning effectively. As Cameron and Panovic (2014) mention, “written language is not acquired ‘naturally’. Individuals need to be taught to read and write, and many societies have managed perfectly well without any knowledge of the written world” (Cameron and Panovic, 2014). 
+              </p>
+              <div class="u11-note">
+                <p class="mb-0">
+                  “Written discourse is considered an imperative aspect that needs to be analysed. Cohesion, coherence, clause relations and text patterns are all parts of written discourse (Alsaawi, 2016)”. 
+                </p>
+              
+              </div>
+
+              <div class="visible-solo-escritorio mt-5">
+                  <img
+                  src="images/Unit1/DA-U1-08.png"
+                  aria-hidden="true"
+                  style="width: 60%"
+                  class="img-full"
+                  alt="Support image"
+                  />
+              </div>
+              <div class="visible-solo-movil mb-5 mt-5">
+                  <img
+                  src="images/Unit1/DA-U1-08.png"
+                  aria-hidden="true"
+                  style="width: 100%"
+                  alt="Support image - movil"
+                  />
+              </div>
+              
+              <div class="visible-solo-escritorio">
+              <p class="parrafo instruccion-color-verde escritorio mt-4">
+                  <b>Instrucción:</b> Press the buttons to access the information
+              </p>
+
+              <p class="sr-only fake-h2" aria-hidden="true">a. Some traditional examples of writte discourse </p>
+              <details class="collapsables-gi-content ">
+                  <summary class="btn"><b>a. Some traditional examples of writte discourse </b></summary>
+                  <div class="collapsables-gi__content collapsable-fondo">
+                      <div class="content-faq">
+                              <p class="mb-0">Some traditional examples of written discourse are:  </p>
+                          <ul class="pl-1_3 mb-0">
+                              <li>
+                                  Instruction sdsdfsdfsdfds
+
+                              </li>
+                              <li>
+                                  Letter to/from friend 
+                              </li>
+                              <li>
+                                  Public notice
+                              </li>
+                              <li>
+                                  Product label
+                              </li>
+                              <li>
+                                  Newspaper obituary 
+                              </li>
+                              <li>
+                                  Poem
+                              </li>
+                              <li>
+                                  News report
+                              </li>
+                              <li>
+                                  Academic article 
+                              </li>
+                              <li>
+                                  Small ads 
+                              </li>
+                              <li>
+                                  Postcard 
+                              </li>
+                              <li>
+                                  Business letters 
+                              </li>
+                              <li>
+                                  (McCarthy, 1991, p. 148) 
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </details>
+
+              <p class="sr-only fake-h2" aria-hidden="true">b. Considerations for digital written discourse</p>
+              <details class="collapsables-gi-content ">
+                  <summary class="btn"><b>b. Considerations for digital written discourse</b></summary>
+                  <div class="collapsables-gi__content collapsable-fondo">
+                      <div class="content-faq">
+                          <p class="mb-0">
+                                Nevertheless, since we live in a digital age, you should also consider some others like:  
+                          </p>
+                          <ul class="pl-1_3 mb-0">
+                              <li>
+                                  Social media posts (e.g., tweets, Facebook updates, Instagram captions) 
+                              </li>
+                              <li>
+                                  Text messages and instant messaging (e.g., WhatsApp, Messenger) 
+                              </li>
+                              <li>
+                                  Blogs and personal reflections (e.g., medium articles, personal diaries)
+                              </li>
+                              <li>
+                                  Online forums and discussion boards (e.g., Reddit threads, course forums) 
+                              </li>
+                              <li>
+                                  Emails and newsletters (both formal and informal)
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </details>
+
+              <p class="sr-only fake-h2" aria-hidden="true">c. Example of written digital discourse </p>
+              <details class="collapsables-gi-content ">
+                  <summary class="btn"><b>c. Example of written digital discourse </b></summary>
+                  <div class="collapsables-gi__content collapsable-fondo">
+                      <div class="content-faq">
+                          <p class="mb-0">Consider the following example and compare it to the conversation in 1.1.1 Spoken discourse:<br><br>
+                          An email to a supervisor<br><br>
+                          Subject: Request for Extension on Report Submission 
+                          Dear Ms. Smith,<br><br>
+                          I hope you are doing well. I am writing to request a short extension for the report due tomorrow. I need a few more hours to ensure its accuracy and completeness. <br> <br>
+                          Please let me know if this would be possible. I appreciate your time and consideration. <br><br>
+                          Best regards,<br>
+                          John Watson 
+
+                          </p>
+                      </div>
+                  </div>
+              </details>
+              </div>
+              
+
+              <div class="visible-solo-movil">
+                  <div style="display: grid; gap: 1rem;">
+                      <div class="content-faq">
+                          <p class="text-center color-faq"><b>a. Some traditional examples of writte discourse</b></p>
+                          <p class="mb-0">Some traditional examples of written discourse are:  </p>
+                          <ul class="pl-1_3 mb-0">
+                              <li>
+                                  Instruction leaflets 
+                              </li>
+                              <li>
+                                  Letter to/from friend 
+                              </li>
+                              <li>
+                                  Public notice
+                              </li>
+                              <li>
+                                  Product label
+                              </li>
+                              <li>
+                                  Newspaper obituary 
+                              </li>
+                              <li>
+                                  Poem
+                              </li>
+                              <li>
+                                  News report
+                              </li>
+                              <li>
+                                  Academic article 
+                              </li>
+                              <li>
+                                  Small ads 
+                              </li>
+                              <li>
+                                  Postcard 
+                              </li>
+                              <li>
+                                  Business letters 
+                              </li>
+                              <li>
+                                  (McCarthy, 1991, p. 148) 
+                              </li>
+                          </ul>
+                      </div>
+
+                      <div class="content-faq">
+                          <p class="text-center color-faq"><b>b. Considerations for digital written discourse</b></p>
+                          <p class="mb-0">
+                                Nevertheless, since we live in a digital age, you should also consider some others like:  
+                          </p>
+                          <ul class="pl-1_3 mb-0">
+                              <li>
+                                  Social media posts (e.g., tweets, Facebook updates, Instagram captions) 
+                              </li>
+                              <li>
+                                  Text messages and instant messaging (e.g., WhatsApp, Messenger) 
+                              </li>
+                              <li>
+                                  Blogs and personal reflections (e.g., medium articles, personal diaries)
+                              </li>
+                              <li>
+                                  Online forums and discussion boards (e.g., Reddit threads, course forums) 
+                              </li>
+                              <li>
+                                  Emails and newsletters (both formal and informal)
+                              </li>
+                          </ul>
+                      </div>
+
+                      <div class="content-faq">
+                          <p class="text-center color-faq"><b>c. Example of written digital discourse</b></p>
+                          <p class="mb-0">Consider the following example and compare it to the conversation in 1.1.1 Spoken discourse:<br><br>
+                          An email to a supervisor<br><br>
+                          Subject: Request for Extension on Report Submission 
+                          Dear Ms. Smith,<br><br>
+                          I hope you are doing well. I am writing to request a short extension for the report due tomorrow. I need a few more hours to ensure its accuracy and completeness. <br> <br>
+                          Please let me know if this would be possible. I appreciate your time and consideration. <br><br>
+                          Best regards,<br>
+                          John Watson 
+
+                          </p>
+                      </div
+                  </div>
+              </div>
+          </div>
+           <p class="mt-5 mb-5">
+                  In this instance of written discourse, you can see some key differences with the spoken discourse. First, the text has a formal structure (i.e., greeting, body, closing remark, etc.). The sentences are also longer and complete because there was some thought put into them before committing them to writing. Furthermore, the vocabulary used is more complex and advanced, there are no contractions because of the formal register, which also means there is no real-time interaction happening.<br><br>
+                  Before delving deeper into discourse analysis, you need to become familiar with different examples of spoken and written discourse and compare these simple features.  
+              </p>
+
+
+      <!-- ========== DA Activity 01 (card) ========== -->
+      <div class="ContainerActivity ">
+              <div class="activities ">
+                  <div class="actividad-titulo"><img src="images/help/activity_Icon.png" alt="Unit 1 - Activity 01"
+                          aria-hidden="true">
+                      <p accesskey="3" tabindex="0" class="mb-0 color__purple" class="fake-h2"><b>DA Activity 01. Exploring and comparing spoken and written discourse</b>
+                          <span aria-hidden="true">&nbsp;</span>
+                      </p>
+                  </div>
+                  <p><b>Score: 5%</b></p>
+
+                  <p class="instrucciones mb-0 "><b>Instructions:</b></p>
+                  <ol class="mb-0 pl-1_3">
+                      <li>
+                          Choose one example of spoken discourse (it can be a transcribed conversation, interview, podcast excerpt, classroom dialogue, etc.)
+                      </li>
+                        <li>
+                          Choose one example of written discourse (e.g., an email, article, social media post, academic text, etc.).
+                      </li>
+                      <li>
+                          Examine each of them in terms of:
+                          <ol class="pl-1_3 lw-alpha">
+                              <li>Structure</li>
+                              <li>Formality</li>
+                              <li>Interactivity</li>
+                              <li>Non-verbal elements, such as intonations, pauses, etc.,</li>
+                          </ol>
+                      <li>
+                          Complete the following table with your findings:
+                      </li>
+                      </li>
+                      <div class="btn-center m-2rem">
+                          <a href="downloads/DA/DA-U1-ACT-DA01.docx" download=""
+                              class="btn-exp text-center ">Activity
+                              01<span class="sr-only">Word document</span>
+                          </a>
+                      </div>
+
+                      <li>
+                        In the same Word document as the table, write a 300-word reflection on what you have learned through this exercise by answering the following questions:
+                        <ol class="pl-1_3 lw-alpha">
+                              <li>What are the main diﬀerences between spoken and written discourse in your examples?</li>
+                              <li>How does context influence how discourse is structured?</li>
+                              <li>Why is it important for language teachers to understand these diﬀerences?</li>
+                          </ol>
+                      </li>
+                      
+                      <li>
+                          Once you finish, save and name it <b>DA01_NameSurname</b>, and upload the complete document (table + reflection)
+                          in Eminus in the corresponding section in ‘<i>Actividades’</i>.
+                      </li>
+                  </ol>
+              </div>
+          </div>
+      </section>
+
+      </section>
+
+      
+
+      <hr class="separador-principal" aria-hidden="true" />
+
+      <!-- Seccion 8, What is... faqs -->
+      <section class="seccion">
+        <h2 class="second__title mb-2rem second__title title__orange bold">
+          <span><b>Unit 1.2</b></span> What is discourse analysis?
+        </h2>
+          <p>
+              What you did in the previous exercise was discourse analysis! Even if it was a little less formal, the process that will be covered in subsequent units is remarkably similar, allowing you to learn about several linguistic disciplines in the way.<br><br>We are now ready to look at some definitions of Discourse Analysis: 
+          </p>
+
+          <div class="visible-solo-escritorio">
+            <p class="parrafo instruccion-color-verde escritorio mt-4">
+                <b>Instrucción:</b> Press the buttons to access the information
+            </p>
+              <p class="sr-only fake-h2" aria-hidden="true">Paltridge (2012)</p>
+              <details class="collapsables-gi-content ">
+                  <summary class="btn"><b>Paltridge (2012)</b></summary>
+                  <div class="collapsables-gi__content collapsable-fondo">
+                      <div class="content-faq">
+                              <p class="mb-0">Discourse analysis examines patterns of language across texts and considers the relationship between language and the social and cultural contexts in which it is used. Discourse analysis also considers the ways that the use of language presents different views of the world and different understandings. It examines how the use of language is influenced by relationships between participants as well as the effects the use of language has upon social identities and relations. It also considers how views of the world, and identities, are constructed through the use of discourse.</p>
+                      </div>
+                  </div>
+              </details>
+
+
+              <p class="sr-only fake-h2" aria-hidden="true">Alsaawi (2016)</p>
+              <details class="collapsables-gi-content ">
+                  <summary class="btn"><b>Alsaawi (2016)</b></summary>
+                  <div class="collapsables-gi__content collapsable-fondo">
+                      <div class="content-faq">
+                          <p class="mb-0">
+                                Discourse analysis is the study of language in either spoken or written form. It moves beyond the level of isolated sentences or words to explore how language is structured and used in real-world communication. This involves examining longer stretches of text or conversation to understand how coherence and meaning are achieved. Ultimately, it aims to uncover the rules and conventions that govern how we use language to create meaningful exchanges. 
+                          </p>
+                      </div>
+                  </div>
+              </details>
+
+              <p class="sr-only fake-h2" aria-hidden="true">Alsoraihi (2019)</>
+              <details class="collapsables-gi-content ">
+                  <summary class="btn"><b>Alsoraihi (2019)</b></summary>
+                  <div class="collapsables-gi__content collapsable-fondo">
+                      <div class="content-faq">
+                          <p>
+                              Fairclough (1995) has defined discourse analysis as the analysis of different texts within the scope of sociocultural practice. This analysis in fact “requires attention to textual form, structure and organization at all levels; phonological, grammatical, lexical (vocabulary) and higher levels of textual organization in terms of exchange systems (the distribution of speaking turns), structures of argumentation, and generic (activity type) structures.
+                          </p>
+                      </div>
+                  </div>
+              </details>
+
+
+              <p class="sr-only fake-h2" aria-hidden="true">Demo (2001)</p>
+              <details class="collapsables-gi-content ">
+                  <summary class="btn"><b>Demo (2001)</b></summary>
+                  <div class="collapsables-gi__content collapsable-fondo">
+                      <div class="content-faq">
+                          <p>
+                              In fact, many students feel hard joining the understanding of the concepts about discourse analysis. Even though, I do believe that discourse analysis is the examination of language use by the members of a speech community. It involves looking at both language form and language functions and includes the study of both spoken interaction and written text (Demo, 2001).
+                          </p>
+                      </div>
+                  </div>
+              </details>
+          </div>          
+
+          <div class="visible-solo-movil">
+              <div style="display: grid; gap: 1rem;">
+                  <div class="content-faq">
+                      <p class="text-center color-faq"><b>Paltridge (2012)</b></p>
+                      <p class="mb-0">Discourse analysis examines patterns of language across texts and considers the relationship between language and the social and cultural contexts in which it is used. Discourse analysis also considers the ways that the use of language presents different views of the world and different understandings. It examines how the use of language is influenced by relationships between participants as well as the effects the use of language has upon social identities and relations. It also considers how views of the world, and identities, are constructed through the use of discourse.</p>
+                  </div>
+
+                  <div class="content-faq">
+                      <p class="text-center color-faq"><b>Alsawawi (2016)</b></p>
+                      <p class="mb-0">
+                            Discourse analysis is the study of language in either spoken or written form. It moves beyond the level of isolated sentences or words to explore how language is structured and used in real-world communication. This involves examining longer stretches of text or conversation to understand how coherence and meaning are achieved. Ultimately, it aims to uncover the rules and conventions that govern how we use language to create meaningful exchanges. 
+                      </p>
+                  </div>
+
+                  <div class="content-faq">
+                      <p class="text-center color-faq"><b>Alsoraihi (2019)</b></p>
+                      <p>
+                          Fairclough (1995) has defined discourse analysis as the analysis of different texts within the scope of sociocultural practice. This analysis in fact “requires attention to textual form, structure and organization at all levels; phonological, grammatical, lexical (vocabulary) and higher levels of textual organization in terms of exchange systems (the distribution of speaking turns), structures of argumentation, and generic (activity type) structures.
+                      </p>
+                  </div>
+
+                  <div class="content-faq">
+                      <p class="text-center color-faq"><b>Demo (2001)</b></p>
+                      <p class="mb-0">
+                          In fact, many students feel hard joining the understanding of the concepts about discourse analysis. Even though, I do believe that discourse analysis is the examination of language use by the members of a speech community. It involves looking at both language form and language functions and includes the study of both spoken interaction and written text (Demo, 2001).
+                      </p>
+                  </div>
+
+              </div>
+          </div>
+
+
+                <hr class="separador-principal" aria-hidden="true" />
+
+      <!-- Seccion 8, What is... faqs -->
+        <p class="fake-h5"><b>Discourse analysis and English Language Teaching (ELT)</b></p>
+        <br>
+        <p>
+            In relation to ELT, Rymes (2008) has defined discourse analysis as “the study of how language-in-use is affected by the context of its use. In the classroom, context can range from the talk within a lesson, to a student’s entire lifetime of socialization, to the history of the institution of schooling” (p.12).<br><br>
+            Discourse Analysis (DA) examines language use and its relationship with the sociocultural context so as to understand how people convey meaning through it. In other words, it studies the relation between language and reality in order to describe and analyse the words that people use in spoken and written interactions (Jacobs & Tschötschel, 2019; Paltridge, 2012). In this sense, Paltridge and Wang (2015) point out that DA focuses on analysing language aspects such as:  
+        </p>
+        
+        <ul class="pill-list mb-5">
+        <li class="pill-item">
+          <span class="pill-icon">
+            <img src="images/Unit1/DA-U1_vinieta-01.png" alt="" aria-hidden="true">
+          </span>
+          <span class="pill-text">
+            Language patterns which occur during the production of written and spoken texts.
+          </span>
+        </li>
+
+        <li class="pill-item">
+          <span class="pill-icon">
+            <img src="images/Unit1/DA-U1_vinieta-02.png" alt="" aria-hidden="true">
+          </span>
+          <span class="pill-text">
+            Language knowledge at different levels, beyond word, phrase, clause, and sentence.
+          </span>
+        </li>
+
+        <li class="pill-item">
+          <span class="pill-icon">
+            <img src="images/Unit1/DA-U1_vinieta-03.png" alt="" aria-hidden="true">
+          </span>
+          <span class="pill-text">
+            What people meant to say and how they conveyed meaning.
+          </span>
+        </li>
+
+        <li class="pill-item">
+          <span class="pill-icon">
+            <img src="images/Unit1/DA-U1_vinieta-04.png" alt="" aria-hidden="true">
+          </span>
+          <span class="pill-text">
+            The relationship between language use and its socio-cultural context.
+          </span>
+        </li>
+
+        <li class="pill-item">
+          <span class="pill-icon">
+            <img src="images/Unit1/DA-U1_vinieta-01.png" alt="" aria-hidden="true">
+          </span>
+          <span class="pill-text">
+            The way in which any language builds different perspectives and meanings of the world.
+          </span>
+        </li>
+        </ul>
+
+      <p>
+            In this course, we will more closely address discourse used by the people involved in the academic context such as teacher-students’ interactions within classrooms, schools and institutions whether in spoken or written discourse.
+        </p>
+        <p class="mt-3 mb-4">
+          This is the end of Unit 1, before moving on, please go to the Forum section and participate in
+          <span class="forum-highlight">Forum B. Discourse analysis’
+          significance in language teaching.</span>
+        </p>
+
+        <div class="ContainerActivity mb-5">
+                  <div class="activities ">
+                      <div class="actividad-titulo img-foro"><img src="images/help/forum_icon.png" alt="Unit 1 - Forum B"
+                              aria-hidden="true">
+                          <p accesskey="1" tabindex="0" class="mb-0 color__purple" class="fake-h2">
+                              <b>DA Forum B. Discourse analysis’ significance in language teaching</b>
+                              <span aria-hidden="true">&nbsp;</span>
+                          </p>
+                      </div>
+                      <p><b>Score:</b> 2.5%</p>
+                      <p class="instrucciones mb-0 "><b>Instructions:</b></p>
+                      <ol class="mb-0 pl-1_3">
+                          <li>Explain the importance of discourse analysis:
+                              <ol class="pl-1_3 lw-alpha">
+                                  <li>Why do you think discourse analysis is important for language teachers?</li>
+                                  <li>Can you think of a classroom situation where understanding discourse would be useful?</li>
+                              </ol>
+                          </li>
+                          <li>Comment on <b>Forum B. Discourse analysis’ significance in language teaching</b></li>
+                              <ol class="pl-1_3 lw-alpha">
+                                      <li>After posting your response, read and comment on at least one classmate’s post.</li>
+                                      <li>Choose at least two and provide constructive feedback.</li>
+                                      <ul class="pl-1_3 disc">
+                                        <li>Do you agree with their perspective?</li>
+                                        <li>Can you add an example or a different insight?</li>
+                                      </ul>
+                              </li>
+                            </ol>
+                              
+                      </ol>
+                  </div>
+      </div>
+      </section>
+
+
+    </main>
+
+
+
+
+
+    <footer>
+      <img
+        class="visible-solo-escritorio img-footer"
+        src="images/lis-e.png"
+        aria-hidden="true"
+        alt="LIS de la UV"
+      />
+      <img
+        class="visible-solo-movil img-footer"
+        src="images/lis-m.png"
+        aria-hidden="true"
+        alt="LIS de la UV"
+      />
+      <div class="pleca-celula" aria-hidden="true">
+        <img
+          src="./images/icono-CDC.png"
+          loading="lazy"
+          alt="Logo Célula de Desarrollo de Contenidos"
+        />
+        <p>Elaborado por Célula de Desarrollo de Contenidos DGTI Xalapa.</p>
+      </div>
+    </footer>
+
+    <div class=" modal fade" id="methods-help" tabindex="1" aria-labelledby="methods-help" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content modal-content--expertos">
+                <div class="modal-header modal-header--expertos">
+                    <button type="button" class="btn-close btn-close--expertos" data-dismiss="modal" aria-label="Close"
+                        accesskey="X"><i class="fa-solid fa-xmark"></i><span class="sr-only">Close
+                            modal</span></button>
+                </div>
+                <div class="modal-body" lang="es">
+                    <!-- <div class="container"> -->
+                    <div class="text-center mb-3">
+                        <p>
+                            <strong>Información de ayuda</strong>
+                        </p>
+                    </div>
+
+                    <p class="">
+                        Para navegar dentro de la Experiencia Educativa, utiliza los siguientes atajos:
+                    </p>
+
+                    <p class="mb-0" lang="en"><b><i>Windows</i></b></p>
+
+                    <ul class="mb-2rem pl-1_4">
+                        <li>Abrir menú principal: Alt + M</li>
+                        <li>Cerrar menú principal: Alt + C</li>
+                    </ul>
+
+                    <p class="mb-0" lang="en"><b><i>MacOS</i></b></p>
+
+                    <ul class=" pl-1_4 mb-0">
+                        <li>Abrir menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+                        <li>Cerrar menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+
+                    </ul>
+                    <!-- </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close--texto" data-dismiss="modal"
+                        aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals (se conservan los de Unit 1.1) -->
+    <div
+      class="modal fade"
+      id="gee-1996"
+      tabindex="-1"
+      aria-labelledby="gee-1996-label"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+      >
+        <div class="modal-content modal-content--expertos">
+          <div class="modal-header modal-header--expertos">
+            <button
+              type="button"
+              class="btn-close btn-close--expertos"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i
+              ><span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="gee-1996-label" class="u11-modal-title fake-h3">
+              <b>Gee (1996)</b>
+            </p>
+            <p class="mb-0">
+              For Gee (1996), Discourse (with a capital D) is “a socially
+              accepted association among ways of using language, other symbolic
+              expressions, and ‘artifacts,’ of thinking, feeling, believing,
+              valuing, and acting that can be used to identify oneself as a
+              member of a socially meaningful group or ‘social network,’ or to
+              signal (that one is playing) a socially meaningful ‘role’”
+              (p.131). In other words, discourse should be conceived as a social
+              practice embracing not only what can be done with the language in
+              real life but also mental and emotional elements that influence
+              these oral interactions.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-close--texto"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="thornbury-2005"
+      tabindex="-1"
+      aria-labelledby="thornbury-2005-label"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+      >
+        <div class="modal-content modal-content--expertos">
+          <div class="modal-header modal-header--expertos">
+            <button
+              type="button"
+              class="btn-close btn-close--expertos"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i
+              ><span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="thornbury-2005-label" class="u11-modal-title fake-h3">
+              <b>Thornbury (2005)</b>
+            </p>
+            <p class="mb-0">
+              Put more simply, Thornbury (2005, p. 7) states that “discourse is
+              the way that language – either spoken or written – is used for
+              communicative effect in a real-world situation”. Hence, anything
+              that can be said or written to communicate intended meanings can
+              be considered discourse, highlighting its functional and
+              purposeful use in authentic contexts to achieve a specific goal or
+              reaction, which is its core pragmatic function.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-close--texto"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="alsaawi-2016"
+      tabindex="-1"
+      aria-labelledby="alsaawi-2016-label"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+      >
+        <div class="modal-content modal-content--expertos">
+          <div class="modal-header modal-header--expertos">
+            <button
+              type="button"
+              class="btn-close btn-close--expertos"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="fa-solid fa-xmark"></i
+              ><span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="alsaawi-2016-label" class="u11-modal-title fake-h3">
+              <b>Alsaawi (2016)</b>
+            </p>
+            <p class="mb-0">
+              Alsaawi (2016, p. 19), entails tangible examples of what discourse
+              can ‘look like’: “discourse can be either written, such as in
+              books, essays, newspapers, magazines, road signs or invoices, or
+              spoken, such as in conversations, verbal interactions and TV
+              programmes”. This perspective primarily focuses on the observable
+              products and physical manifestations of language, categorizing
+              them by their modality to provide a concrete and accessible
+              understanding of the linguistic phenomenon in everyday life,
+              listing its common forms and mediums.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-close--texto"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts (orden igual al de tus otras páginas) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+
+    <!-- Igual que Unit 1 para el sidebar -->
+    <script src="js/main.js"></script>
+    <script src="js/puntos.js"></script>
+    <script src="js/menu-component.js"></script>
+
+    <!-- Boxlayout (notas) -->
+    <script src="js/boxlayout.js"></script>
+    <script>
+      (function () {
+        function selectAll(sel, root) {
+          return Array.prototype.slice.call(
+            (root || document).querySelectorAll(sel)
+          );
+        }
+        function closeAll(main) {
+          selectAll("figure", main).forEach(function (fig) {
+            fig.classList.remove("bl-expand", "bl-expand-top");
+            var box = fig.querySelector(".bl-box");
+            if (box) box.setAttribute("aria-expanded", "false");
+          });
+          main.classList.remove("bl-expand-item");
+        }
+        function openFig(main, fig) {
+          closeAll(main);
+          fig.classList.add("bl-expand", "bl-expand-top");
+          main.classList.add("bl-expand-item");
+          var box = fig.querySelector(".bl-box");
+          if (box) box.setAttribute("aria-expanded", "true");
+          fig.querySelector(".bl-content")?.focus?.();
+        }
+        function wire(main) {
+          var figures = selectAll("figure", main);
+          figures.forEach(function (fig) {
+            var box = fig.querySelector(".bl-box");
+            var closeBtn = fig.querySelector(".bl-icon-close");
+            if (box) {
+              box.addEventListener("click", function () {
+                openFig(main, fig);
+              });
+              box.addEventListener("keydown", function (e) {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  openFig(main, fig);
+                }
+              });
+            }
+            if (closeBtn) {
+              closeBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                closeAll(main);
+              });
+            }
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape") {
+              closeAll(main);
+            }
+          });
+          main.addEventListener("transitionend", function () {
+            var expanded = main.querySelector("figure.bl-expand");
+            document.body.style.overflow = expanded ? "hidden" : "";
+          });
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+          var main = document.getElementById("bl-main");
+          if (main && main.classList.contains("bl-main")) {
+            Boxlayout.init();
+          }
+        });
+      })();
+    </script>
+
+    <!-- Colorcitos de fondo a las tarjetas (como ya tenías) -->
+    <script>
+      setTimeout(function () {
+        $(".bl-main > figure").each(function (i) {
+          var colors = ["CAAFD8", "F9CACA", "CED7EF", "FCDDB9"];
+          $(this).attr("data-color", colors[i % colors.length]);
+          $(this)
+            .find(".color")
+            .css("background-color", "#" + colors[i % colors.length]);
+        });
+      }, 200);
+      $(".bl-main > figure").on("click", function () {
+        $(this).css("background-color", "#" + $(this).attr("data-color"));
+      });
+    </script>
+
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+  // Inicializa tu carrusel
+  new Swiper('.mySwiper', {
+    // altura automática según el slide
+    autoHeight: true,
+    spaceBetween: 16,
+    // navegación
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    // accesibilidad
+    a11y: true
+  });
+    </script>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        // tus opciones del slider
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        loop: false // si quieres loop, cámbialo a true
+      });
+
+      const counterEl = document.querySelector('.mySwiper .u11-counter');
+
+      function getRealTotal(swiper) {
+        if (!swiper.params.loop) return swiper.slides.length;
+        return Array.from(swiper.slides)
+          .filter(s => !s.classList.contains('swiper-slide-duplicate')).length;
+      }
+
+      const total = getRealTotal(swiper);
+
+      function updateCounter() {
+        counterEl.textContent = `${swiper.realIndex + 1} / ${total}`;
+      }
+
+      swiper.on('slideChange', updateCounter);
+      updateCounter();
+    </script>
+
+  </body>
+</html>

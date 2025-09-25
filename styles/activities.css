@@ -1,0 +1,77 @@
+.activities ol>li::marker {
+    font-weight: bold;
+}
+
+.activities {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.ContainerActivity {
+    position: relative;
+}
+
+.activities::after {
+    position: absolute;
+    height: 4px;
+    background: #CE5958;
+    width: 35px;
+    left: 2rem;
+    top: 0;
+    content: " ";
+}
+
+.disc {
+    list-style: disc;
+}
+
+.lw-alpha {
+    list-style: lower-alpha;
+}
+
+.btn-center {
+    display: flex;
+    justify-content: center;
+}
+
+.font__activities {
+    font-size: 2rem !important;
+}
+
+.font__activities {
+    border-bottom: #CE5958 4px solid;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+
+
+@media screen and (max-width: 1199px) {}
+
+@media screen and (max-width: 767px) {
+    .font__activities {
+        font-size: 1.3rem !important;
+    }
+
+    .activities {
+        padding: 1rem;
+    }
+
+    .activities::after {
+        left: 1rem;
+    }
+
+    .font__activities {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .activities img {
+        margin-bottom: .5rem;
+        margin-right: .5rem;
+    }
+}

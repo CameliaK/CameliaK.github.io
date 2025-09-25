@@ -1,0 +1,54 @@
+.font__generic {
+    font-size: 2rem !important;
+}
+
+.font__generic,
+.unidad__titulo {
+    position: relative;
+}
+
+.font__generic::after,
+.unidad__titulo::after {
+    content: " ";
+    position: absolute;
+    width: 25%;
+    background: #CE5958;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.font__generic,
+.unidad__titulo {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.font__generic::after,
+.unidad__titulo::after {
+    width: 85%;
+    max-width: 14rem;
+    height: 0.25rem;
+}
+
+.font__generic span,
+.unidad__titulo span {
+    color: #124491;
+    display: block;
+}
+
+.font__generic span,
+.unidad__titulo span {
+    display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+    .font__generic {
+        font-size: 1.3rem !important;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+

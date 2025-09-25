@@ -1,0 +1,547 @@
+
+.contentmenu{ height: 600px; position: relative; margin: 2rem 0;}
+
+.bl-main {
+	position: absolute;
+	width:  100%;
+	height: 100%;
+	overflow: hidden;	
+}
+.columnas-box{ padding: 2rem; }
+
+.img-caja{ width: 100%; max-width: 7rem; border-radius: 50%}
+
+.img-responsive {
+    max-width: 14rem;    
+    margin: 3rem auto 1rem;
+}
+
+.bl-main > figure {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	background-color:#e6e6e6;
+	border:1px solid #fff;
+	box-shadow: none;
+}
+
+.bl-box > hr, .bl-content hr {
+    width: 70%;
+    border-color: #fff;
+    margin: 1rem auto;
+}
+
+.bl-main > figure:first-child {
+	top: 0;
+	left: 0;	
+}
+
+.bl-main > figure:nth-child(2) {
+	top: 0;
+	left: 50%;	
+}
+
+.bl-main > figure:nth-child(3) {
+	top: 50%;
+	left: 0;	
+}
+
+.bl-main > figure:nth-child(4) {
+	top: 50%;
+	left: 50%;	
+}
+
+.bl-main > figure {
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+
+
+.bl-box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	opacity: 1;
+	/* Centering with flexbox */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.bl-box .bl-icon-about {
+	text-align: center;
+	margin: 0;
+	width: 100%;
+}
+
+.bl-main > figure .bl-icon-close {
+	position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.bl-main > figure .bl-icon-close:hover { background:#eaeaea; color:#0364B8; }
+
+.bl-content, 
+div.bl-panel-items > div > div {
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding: 0 20px;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+/* Panel Items */
+
+div.bl-panel-items,
+div.bl-panel-items > div {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+div.bl-panel-items > div > div {
+	width: 60%;
+	margin: 0 auto;
+	opacity: 1;
+	bottom: 90px;
+	top: 90px;
+	pointer-events: auto;
+}
+
+div.bl-panel-items > div > div h3 {
+	font-size: 2.4em;
+	font-weight: 300;
+	margin: 0 0 20px 0;
+}
+
+div.bl-panel-items > div > div p {
+	font-size: 1.3em;
+}
+
+div.bl-panel-items > div > div img {
+	float: left;
+	margin: 0 20px 20px 0;
+	max-width: 100%;
+}
+
+div.bl-panel-items {
+	top: 100%;
+	z-index: 9999;
+}
+
+div.bl-panel-items > div {
+	background: #3ba5db;
+	z-index: 0;
+	opacity: 0;
+	-webkit-transform: translateY(0);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0s linear 0.5s;
+	-moz-transform: translateY(0);
+	-moz-transition: -moz-transform 0.5s ease-in-out, opacity 0s linear 0.5s;
+	transform: translateY(0);
+	transition: transform 0.5s ease-in-out, opacity 0s linear 0.5s;
+	-ms-transform: translateY(0);
+}
+
+div.bl-panel-items > div.bl-show-work {
+	z-index: 1000;
+	opacity: 1;
+	-webkit-transform: translateY(-100%);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
+	-moz-transform: translateY(-100%);
+	-moz-transition: -moz-transform 0.5s ease-in-out;
+	transform: translateY(-100%);
+	transition: transform 0.5s ease-in-out;
+	-ms-transform: translateY(-100%);
+}
+
+div.bl-panel-items > div.bl-hide-current-work {
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	-webkit-transform: translateY(-100%) scale(0.5);
+	-moz-transition: -moz-transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	-moz-transform: translateY(-100%) scale(0.5);
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	transform: translateY(-100%) scale(0.5);
+	-ms-transform: translateY(-100%) scale(0.5);
+	z-index: 0;
+}
+
+/* Separated for a better overview and control */
+.bl-main > figure.bl-expand {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.bl-main > figure.bl-expand-top {
+	z-index: 100;
+}
+
+.bl-main > figure:first-child.bl-expand {
+	background: #CAAFD8; 
+}
+.bl-main > figure:nth-child(2).bl-expand {
+	background: #F9CACA; 
+}
+.bl-main > figure:nth-child(3).bl-expand {
+	background: #CED7EF; 
+}
+.bl-main > figure:nth-child(4).bl-expand {
+	background: #FCDDB9; 
+}
+
+.bl-main.bl-expand-item > figure:not(.bl-expand),
+.bl-main.bl-expand-item > figure.bl-scale-down {
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	-ms-transform: scale(0.5);
+	transform: scale(0.5);
+	opacity: 0;
+}
+
+.bl-box {
+	-webkit-transition: opacity 0.2s linear 0.5s;
+	-moz-transition: opacity 0.2s linear 0.5s;
+	transition: opacity 0.2s linear 0.5s;
+}
+
+figure.bl-expand .bl-box {
+	opacity: 0;
+	-webkit-transition: opacity 0s linear;
+	-moz-transition: opacity 0s linear;
+	transition: opacity 0s linear;
+}
+
+.bl-content,
+.bl-icon-close {
+	-webkit-transition: opacity 0.1s linear 0s;
+	-moz-transition: opacity 0.1s linear 0s;
+	transition: opacity 0.1s linear 0s;
+}
+
+figure.bl-expand .bl-content,
+figure.bl-expand .bl-icon-close {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s linear 0.5s;
+	-moz-transition: opacity 0.3s linear 0.5s;
+	transition: opacity 0.3s linear 0.5s;
+}
+
+@media screen and (max-width: 540px) {
+	
+	.contentmenu{ height: 600px;}
+	.bl-main > figure{ width: 50%; height: 33.33%}
+		
+	.bl-main > figure .bl-icon-close{ top: 0; right: 0; }
+
+	.bl-main > figure:nth-child(2) {
+		top: 0;
+		left: 50%;
+	}
+
+	.bl-main > figure:nth-child(3) {
+		top: 33.33%;
+		left: 0%;
+	}
+
+	.bl-main > figure:nth-child(4) {
+		top: 33.33%;
+		left: 50%;
+	}
+
+	.bl-main > figure:nth-child(5) {
+		top: 66.66%;
+		left: 0%;
+	}
+
+	.bl-main > figure:nth-child(6) {
+		top: 66.66%;
+		left: 50%;
+	}
+
+	.bl-main > figure.bl-expand{ top: 0; left: 0; }	
+}
+
+@media screen and (max-width: 46.5em) {
+
+	.bl-content, .bl-box {
+		font-size: 100%;
+	}
+
+	.bl-expand .bl-box {
+		height: 130px;
+	}
+
+	.bl-content > ul li {
+		width: 40%;
+	}
+}
+
+.instruccion-color-verde {
+    color: #007C32;
+}
+
+@media screen and (max-width: 767px) {
+	.img-caja{ margin-bottom:1rem; }
+	.separador-movil{ border: 1px solid #B5DCEA; margin:1rem auto 2rem; width:80%; }
+}
+
+.text-azul{ color:#2B5DAA; font-weight:bold; }
+
+/* ====== 3 notas en un solo nivel (fila única) ====== */
+.contentmenu{ 
+  position: relative;
+  height: 300px;               /* AJUSTA aquí si las ves muy altas/bajas (ej. 320–420px) */
+}
+
+/* Distribución 3-up en escritorio */
+.bl-main.bl-3up > figure{
+  width: 33.3333%;
+  height: 100%;
+  top: 0;
+}
+.bl-main.bl-3up > figure:nth-child(1){ left: 0; }
+.bl-main.bl-3up > figure:nth-child(2){ left: 33.3333%; }
+.bl-main.bl-3up > figure:nth-child(3){ left: 66.6666%; }
+
+/* Evitar que el contenido expandido empuje el layout; hace scroll si es muy largo */
+.bl-main.bl-3up > figure .bl-content{
+  max-height: calc(100% - 40px); /* deja margen para el botón cerrar si lo usas */
+  overflow: auto;
+}
+
+/* Responsive: en pantallas chicas, apilar y dar más alto al contenedor */
+@media (max-width: 991.98px){
+  .contentmenu{ height: 600px; }
+  .bl-main.bl-3up > figure{
+    width: 100%;
+    height: 33.333%;
+    left: 0;
+  }
+  .bl-main.bl-3up > figure:nth-child(1){ top: 0; }
+  .bl-main.bl-3up > figure:nth-child(2){ top: 33.333%; }
+  .bl-main.bl-3up > figure:nth-child(3){ top: 66.666%; }
+}
+ 
+/* ===== FIX: cuando una tarjeta se expande, que ocupe todo el contenedor ===== */
+.bl-main.bl-3up > figure.bl-expand,
+.bl-main.bl-3up.bl-expand-item > figure.bl-expand{
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+
+/* (opcional) si el contenido es largo, que haga scroll dentro del panel */
+.bl-main.bl-3up > figure.bl-expand .bl-content{
+  max-height: calc(100% - 40px);
+  overflow: auto;
+}
+
+
+/* Ajustar título */
+.bl-box p.bl-icon-about {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Solo afecta a los hr dentro de las notas (cards) */
+.bl-box hr {
+  border: none;                /* quita el estilo viejo */
+  border-bottom: 2px solid #CE5958; /* línea roja */
+  margin: 10px auto;           /* centrado con espacio arriba/abajo */
+  width: 70%;        
+  opacity: 100%;          /* puedes ajustar el ancho */
+}
+
+.bl-main > figure:first-child:hover {
+	background: #CAAFD8;
+}
+
+.bl-main > figure:nth-child(2):hover {
+	background: #F9CACA;
+}
+
+.bl-main > figure:nth-child(3):hover {
+	background: #CED7EF;
+}
+
+.bl-main > figure:nth-child(4):hover {
+	background: #FCDDB9;
+}
+
+.bl-main > figure:first-child:hover      { background: #CAAFD8 !important; }
+.bl-main > figure:nth-child(2):hover     { background: #F9CACA !important; }
+.bl-main > figure:nth-child(3):hover     { background: #CED7EF !important; }
+
+
+/* ===== Centrar imagen y título cuando se abre la nota ===== */
+.bl-main.bl-3up > figure.bl-expand .bl-content .row{
+  display: grid;
+  grid-template-columns: 1fr;   /* una sola columna */
+  justify-items: center;        /* centra horizontalmente */
+  text-align: center;           /* centra títulos/HR */
+  gap: 1rem;
+}
+
+/* bloque con la imagen (tu col-md-4) */
+.bl-main.bl-3up > figure.bl-expand .bl-content .text-xs-right{
+  order: 1;                     /* primero arriba */
+  width: 100%;
+}
+
+/* la imagen en verdad centrada */
+.bl-main.bl-3up > figure.bl-expand .bl-content .img-responsive{
+  float: none;                  /* anula flotado heredado */
+  display: block;
+  margin: 2rem auto 1rem;       /* centrada con márgenes */
+  max-width: 10rem;             /* ajústalo si la quieres más grande/pequeña */
+}
+
+/* la línea bajo la imagen centrada */
+.bl-main.bl-3up > figure.bl-expand .bl-content hr{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* bloque de texto (tu col-md-8) debajo, ancho legible */
+.bl-main.bl-3up > figure.bl-expand .bl-content .columnas-box{
+  order: 2;                     /* va después de la imagen */
+  text-align: left;             /* párrafos alineados a la izquierda */
+  width: min(900px, 92%);       /* lectura cómoda */
+  margin: 0 auto;
+}
+
+/* si algún estilo previo fuerza 2 columnas, anulamos su altura */
+.bl-main.bl-3up > figure.bl-expand .bl-content{
+  max-height: none;
+}
+
+/* ===== Panel expandido (ajustes finos) ===== */
+
+
+
+/* 3) hr rojo en el panel (solo aquí) */
+.bl-main > figure.bl-expand .bl-content hr{
+  border: 0;
+  height: 3px;
+  background:#CE5958;  
+  opacity: 100%;               /* rojo */
+  width: 55%;                         /* ajusta el largo si quieres */
+  margin: .75rem auto .75rem !important; /* menos espacio con el título/texto */
+  border-radius: 2px;
+}
+/* 1. Reducir el padding dentro de la columna de texto */
+.bl-main.bl-3up > figure.bl-expand .bl-content .columnas-box {
+  padding: 0rem !important;     /* antes 2rem */
+  width: min(950px, 95%);
+  margin: 0 auto;
+}
+
+/* 2. Compactar los párrafos */
+.bl-main.bl-3up > figure.bl-expand .bl-content .columnas-box p {
+  margin: 0rem 0 !important;  /* menos separación entre párrafos */
+  line-height: 1.45 !important; /* texto más compacto */
+}
+
+/* 3. Ajustar el separador (hr) bajo el título */
+.bl-main > figure.bl-expand .bl-content hr {
+  border: 0;
+  height: 2px;
+  background: #CE5958;           /* rojo */
+  width: 50%;                    /* más corto */
+  margin: 0.5rem auto;           /* menos espacio arriba/abajo */
+}
+
+
+/* Tarjetas normales */
+.u11-card {
+  flex: 1;
+  min-height: 200px;
+  transition: all 0.3s ease;
+}
+
+/* Cuando se abre (modal/expandida) */
+.u11-card.open {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;   /* más ancho que 3 tarjetas */
+  max-height: 80vh;
+  z-index: 1050;
+  overflow-y: auto;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+/* ========== OVERRIDES PARA TAMAÑO DE TARJETAS ========== */
+
+/* 1) Por defecto, haz las tarjetas un poco más bajas */
+.contentmenu{ height: 300px !important; } /* antes estaba en 360px */
+
+/* 2) Cuando hay una tarjeta expandida, eleva la altura del contenedor
+      a casi toda la ventana. (usa :has para detectar el estado) */
+.contentmenu:has(.bl-main.bl-expand-item){
+  height: 71vh !important;
+}
+
+/* 3) Fuerza el tamaño de la tarjeta expandida a ocupar ese alto,
+      superando reglas anteriores que ponen height:100% */
+.contentmenu .bl-main > figure.bl-expand,
+.contentmenu .bl-main.bl-3up > figure.bl-expand{
+  width: 100% !important;
+  height: 92vh !important;       /* ahora sí crece más que las 3 tarjetas */
+  top: 0 !important;
+  left: 0 !important;
+}
+
+/* (opcional) un pelín menos de padding si quieres ver más texto aún */
+.contentmenu .bl-main > figure.bl-expand .bl-content{
+  padding: 0 6vw 4vh !important;
+}

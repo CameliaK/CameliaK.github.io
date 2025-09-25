@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title lang="es">Discourse Analysis</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Librería para animar recursos animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="styles/component2.css" /> -->
+</head>
+
+<body class="cuerpo-index">
+    <div class="presentacion">
+            <div class="presentacion__contenedor-liz"></div>
+            <div class="presentacion__contenedor-imagen">
+                <img src="images/index/DA-HOME-IG_DA-ID.png" alt="Imágen decorativa" aria-hidden="true">
+            </div>
+            <div class="presentacion__titulo">
+                <h1 class="titulo-R"><span>Discourse Analysis</span></h1>
+            </div>
+            <p class="sr-only">Discourse Analysis</p>
+            <p class="sr-only">Discourse Analysis</p>
+        </div>
+    <div class="sr-only" lang="es">
+        <p> 
+            Para acceder a la información de ayuda de esta Experiencia Educativa en <i lang="en">Windows</i> presiona
+            las teclas Alt + i, en <i lang="en">MacOS</i> presiona las teclas <i lang="en">Control</i> + <i
+                lang="en">Option</i> + i
+            Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
+            en <i lang="en">MacOS</i> presiona la tecla Esc
+        </p>
+
+        <p>
+            Para navegar dentro de la Experiencia Educativa, utiliza los siguientes atajos:
+        </p>
+
+        <p class="mb-0" lang="en"><b>Windows</b></p>
+        <ul class="ml-4">
+            <li>Abrir menú principal: Alt + M</li>
+            <li>Cerrar menú principal: Alt + C</li>
+        </ul>
+
+        <p class="mb-0" lang="en"><b>MacOS</b></p>
+
+        <ul class="ml-4">
+            <li>Abrir menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+            <li>Cerrar menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+        </ul>
+    </div>
+
+    <div class=" visible-solo-escritorio container-help" aria-hidden="true">
+        <button accesskey="i" class="help  animate__animated animate__bounceIn animate-bounceIn animate__slower
+            waves-effect waves-light" data-toggle="modal" data-target="#methods-help" tabindex="-1">
+            <img class="w-100" src="./images/help/info-A02.png" alt="Support image">
+        </button>
+    </div>
+
+    <!-- INICIA BOTON NAVEGACION LATERAL -->
+    <button accesskey="M" type="button" class="btn btn-info js-sidebar__collapse sidebar__collapse" aria-pressed="false"
+        aria-expanded="false" aria-label="Expand side menu">
+        <span lang="es">Menu</span><span aria-hidden="true">&nbsp;&nbsp;</span><i class="fas fa-bars"></i>
+    </button>
+    <!-- TERMINA BOTON NAVEGACION LATERAL -->
+
+    <!-- INICIA NAVEGACIÓN LATERAL -->
+    <navbar class="sidebar" role="navigation" aria-label="Menu" name="Menu">
+        <div class="sidebar__encabezado">
+            <button accesskey="C" aria-details="Close side menu" class="btn btn-link sidebar__dismiss">
+                <i class="fas fa-arrow-right sidebar__icono"></i><span class="sr-only">Close navigation menu</span>
+            </button>
+        </div>
+        <menu-component></menu-component>
+
+        <div class="sidebar__encabezado">
+            <button aria-details="Cerrar menú lateral de navegación" class="btn btn-link sidebar__dismiss">
+                <i aria-hidden="true" class="fas fa-arrow-right sidebar__icono"></i><span class="sr-only">Close
+                    navigation menu</span>
+            </button>
+        </div>
+    </navbar>
+    <!-- TERMINA NAVEGACIÓN LATERAL -->
+
+    <!-- INICIA PANTALLA COMPLETA -->
+
+    <header>
+        
+
+        <div style="z-index: 500;" class="fixed-top encabezado">
+            <div class="container visible-solo-escritorio">
+                <span class=" pleca__encabezado " aria-hidden="true">
+                    Discourse Analysis
+                </span>
+            </div>
+
+            <div class="container visible-solo-movil">
+                <p class="mb-0" aria-hidden="true">
+                    <span class="pleca__encabezado">Home</span>
+                </p>
+            </div>
+
+            <!-- INICIA PLECA -->
+            <div class="js-pleca pleca">
+                <a aria-hidden="true" target="_blank" rel="noopener noreferrer" class="pleca__uv" lang="es"
+                    href="https://uv.mx/">Universidad
+                    Veracruzana</a>
+                <!-- <span class="sr-only">Ir  uv.mx</span> -->
+            </div>
+            <!-- TERMINA PLECA -->
+        </div>
+    </header>
+
+
+    <main>
+        <!-- INICIA INFORMACION EE -->
+        <section class="seccionTopic back-gree">
+            <div class="sr-only" lang="es">
+                <p>Área de formación: Formación disciplinar</p>
+                <p>Pre-requisitos: N/A</p>
+                <p>Créditos: 12</p>
+            </div>
+
+            <div aria-hidden="true" class="structure_table">
+                <div class="side_table back-blue radius-left">
+                    <p class=" border-b-table bold mb-0  padd_5 min-h-celda "><i>Área de formación</i></p>
+                    <p class=" border-b-table bold mb-0  padd_5 "><i>Pre-requisitos</i></p>
+                    <p class=" bold mb-0 padd_5 "><i>Créditos</i></p>
+                </div>
+                <div class="side_table border-l-table back-white radius-right">
+                    <p class="border-b-table mb-0 padd_5"><i>Formación disciplinar</i></p>
+                    <p class="border-b-table mb-0 padd_5"><i>N/A</i></p>
+                    <p class="mb-0 padd_5"><i>12</i></p>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="seccion__titulo m-2rem">Level of students' competence</h2>
+                <p class="mb-0">The students are able to apply discourse analysis techniques in a foreign language inside and outside the language classroom through the understanding, comparison, and discussion of different discursive elements in both oral and written discourse. In this course, the students show a sense of responsibility, commitment, respect, and honesty to identify forms that promote language learning and enhance their teaching practice.</p>
+            </div>
+        </section>
+
+
+
+        <section class=" seccionTopic back-blue">
+            <div class="container">
+                <h2 class="seccion__titulo">Description</h2>
+                <!-- <p class="color-red">PENDIENTE</p> -->
+                <p class="mb-0">This course introduces students to the study of discourse analysis, with a focus on how language is used in real-world communication. It explores key concepts such as cohesion, coherence, spoken vs. written discourse, genres, discourse types, and the applications of all these into teaching English as a foreign language. Students will analyze authentic texts and interactions by means of theoretical discussions and practical applications, which in turn will enhance their ability to teach and assess language use effectively.</p>
+            </div>
+        </section>
+        <!-- FINA DESCRIPCIÓN -->
+
+        <!-- INICIA INSTRUCTORES -->
+        <section class="seccionTopic">
+            <div class="container">
+                <h2 class="seccion__titulo">Course designer</h2>
+                <div class="visible-solo-escritorio  ">
+                    <!-- INICIA EXPERTOS -->
+                    <div class="contenedor-expertos">
+                        <div class="structure-expert">
+                            <div class="section-img-expert">
+                                <img class="img-experts" src="./images/CarlosNuñez.png" alt="Support image"
+                                    aria-hidden="true">
+                            </div>
+                            <div lang="es" class="section-expert-info">
+                                <p class="mb-0 texto-morado"><b>Carlos Núñez Mercado</b><br>
+                                    <span lang="es"><i>Universidad Veracruzana</i></span>
+                                </p>
+
+                                <div class="btn-right">
+                                    <button type="button" class="btn btn-link btn-modals btn-modals-expert "
+                                        data-toggle="modal" data-target="#modal-experto-1">+ Info</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Experto 2: Daniel Jacobo Gidi Martí -->
+                        <div class="structure-expert">
+                            <div class="section-img-expert">
+                                <img class="img-experts" src="./images/DanielGidi.png" alt="Foto de Daniel Jacobo Gidi Martí" aria-hidden="true">
+                            </div>
+                            <div lang="es" class="section-expert-info">
+                                <p class="mb-0 texto-morado"><b>Daniel Jacobo Gidi Martí</b><br>
+                                    <span lang="es"><i>Universidad Veracruzana</i></span>
+                                </p>
+                                <div class="btn-right">
+                                    <button type="button" class="btn btn-link btn-modals btn-modals-expert"
+                                        data-toggle="modal" data-target="#modal-experto-3">+ Info</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experto 3: Patricia Núñez Mercado -->
+                        <div class="structure-expert">
+                            <div class="section-img-expert">
+                                <img class="img-experts" src="./images/PatriciaNuñez.png" alt="Foto de Patricia Núñez Mercado" aria-hidden="true">
+                            </div>
+                            <div lang="es" class="section-expert-info">
+                                <p class="mb-0 texto-morado"><b>Patricia Núñez Mercado</b><br>
+                                    <span lang="es"><i>Universidad Veracruzana</i></span>
+                                </p>
+                                <div class="btn-right">
+                                    <button type="button" class="btn btn-link btn-modals btn-modals-expert"
+                                        data-toggle="modal" data-target="#modal-experto-4">+ Info</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="visible-solo-movil">
+                    <div class="experts-cont">
+                        <!-- Carlos Núñez Mercado -->
+                        <div class="container-experts">
+                            <img class="img-experts" style="margin: auto;" src="./images/CarlosNuñez.png" alt="Foto de Carlos Núñez Mercado">
+                            <p class="text-center" style="margin: 1rem 0 0 0;"><b>Carlos Núñez Mercado</b></p>
+                            <p class="text-center"><i lang="es">Universidad Veracruzana</i></p>
+                            <p class="mb-0">
+                                Head of the online BA in ELT Department since 2019, teaches at the BA in English Language and the online BA in ELT of the <i>Universidad Veracruzana</i> in Mexico. He holds an MA in TEFL and a PhD in Language Studies and Applied Linguistics, both from the <i>Universidad Veracruzana</i>. He has over 10 years of experience teaching EFL students in both high school and higher education levels. He also holds a C2 level language certification from the University of Cambridge. He has participated in the online BA in ELT COAPEHUM certifications and redesign committees.<br><br>
+                                He has supervised numerous students’ research projects from the BA and MA programmes of the university; his research interests and publications focus on teaching linguistic and communicative skills, the use of ICT in ELT, and Corpus Linguistics methods in language studies. He is a member of the Research Group Applied Linguistics in English Language Teaching and Learning (UV-CA-543). He has presented a number of papers at national and international conferences.
+                            </p>
+                        </div>
+                        <!-- Daniel -->
+                        <div class="container-experts">
+                            <img class="img-experts" style="margin: auto;" src="./images/DanielGidi.png" alt="Foto de Daniel Jacobo Gidi Martí">
+                            <p class="text-center" style="margin: 1rem 0 0 0;"><b>Daniel Jacobo Gidi Martí</b></p>
+                            <p class="text-center"><i lang="es">Universidad Veracruzana</i></p>
+                            <p class="mb-0">
+                                BA in English Language Teaching, MA in Teaching English as a Foreign Language and PhD in Educational Research from the <i>Universidad Veracruzana</i>. He has taught for more than 10 years in public and private educational institutions. He obtained his first scientific publication in the journal Teaching Innovations of the University of Belgrade, Serbia. His main line of research is student-centred English language learning and he belongs to the Research Group "Linguistics and Translation" of the <i>Universidad Veracruzana</i>.
+                            </p>
+                        </div>
+                        <!-- Patricia -->
+                        <div class="container-experts">
+                            <img class="img-experts" style="margin: auto;" src="./images/PatriciaNuñez.png" alt="Foto de Patricia Núñez Mercado">
+                            <p class="text-center" style="margin: 1rem 0 0 0;"><b>Patricia Núñez Mercado</b></p>
+                            <p class="text-center"><i lang="es">Universidad Veracruzana</i></p>
+                            <p class="mb-0">
+                                Holds a BA in English, a BA in French, a TEFL MA from the <i>Universidad Veracruzana</i>, and a PhD in Applied Linguistics from the University of Southampton. She is a full-time lecturer at the School of Languages of the <i>Universidad Veracruzana</i>, teaching at the BA in English, the online BA in TEFL, the TEFL MA, and the Foreign Language Department. She was the coordinator of the English academy from 2005 to 2011, the head of the English BA Department from 2011 to 2013, and the coordinator of the tutorial system of the same BA programme from 2013 to 2015. She has supervised numerous students’ research projects in all the programmes she teaches.<br><br>
+                                She belonged to the Standardized Exams committee of the English BA from 2002 to 2012, and the EXAVER designers’ committee in 2015. She has also taught teacher training courses and workshops for the School of Languages academic staff and has participated in the certification and redesign committees of the BA and MA programmes. She holds a C2 language certification from the University of Cambridge and was a member of the CENEVAL committee for the BA in ELT certification exam. She coordinates the Research Group Applied Linguistics in English Language Teaching and Learning (UV-CA-543) and is a member of the RECALE (a national network for research groups in foreign languages). Her research interests are L2 literacy in higher education, English language learning and teaching, and research processes. She has participated in numerous national and international conferences, both as a presenter and attendee. She has published several book chapters and journal articles, coordinated several books on the ELT training area, and co-authored a research report writing handbook for beginners.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="seccionTopic back-yellow">
+            <div class="container ">
+                <!-- INICIO WORK SCHEDULE -->
+                <div class="structure-schedule">
+                    <!-- <div> -->
+                    <h2 class="seccion__titulo">Work schedule</h2>
+                    <!-- </div> -->
+                    <div>
+                        <div>
+                            <p class=" mb-0  titulo__units " style="padding-bottom: 0; font-weight: bold; ">4 Units
+                            </p>
+                            <div class="ws__lineas contenedor-lineas"><span class="linea linea--1"></span><span
+                                    class="linea linea--2"></span><span class="linea linea--3"></span><span
+                                    class="linea linea--4"></span></div>
+                            <ul class="mb-0">
+                                <li>General information</li>
+                                <li>Unit 1. Defining discourse analysis</li>
+                                <li>Unit 2. Exploring discourse analysis methods</li>
+                                <li>Unit 3. Discourse analysis applied to language aspects</li>
+                                <li>Unit 4. Discourse analysis in ELT</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN WORK SCHEDULE -->
+            </div>
+        </section>
+
+        <section class="seccionTopic ">
+            <div class="container">
+                <h2 class="seccion__titulo">Bibliography</h2>
+                <div>
+                    <p class="instrucciones"><b>Instruction:</b> Press the button to download the file.</p>
+                    <div class="btn-right">
+                        <a href="downloads/DA/DA_Bibliography (PP) .docx" download="" class="btn-exp m-auto">Bibliography<span
+                                class="sr-only">Word document</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- TERMINA CONTENIDO -->
+
+    <footer>
+        <img class="visible-solo-escritorio img-footer" src="images/lis-e.png" aria-hidden="true" alt="LIS de la UV">
+
+        <img class="visible-solo-movil img-footer" src="images/lis-m.png" aria-hidden="true" alt="LIS de la UV">
+
+        <div class="pleca-celula" aria-hidden="true">
+            <img src="./images/icono-CDC.png" loading="lazy" alt="Logo de la Célula de Desarrollo de Contenidos">
+            <p>Elaborado por Célula de Desarrollo de Contenidos DGTI Xalapa.</p>
+        </div>
+    </footer>
+
+    <!-- INICIA MODALES EXPERTOS -->
+    <div class="modal fade" id="modal-experto-1" tabindex="-1" aria-labelledby="modal-experto-1" aria-hidden="true"
+        lang="en">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content modal-content--expertos">
+                <div class="modal-header modal-header--expertos">
+                    <button type="button" class="btn-close btn-close--expertos" data-dismiss="modal"
+                        aria-label="Close"><i class="fa-solid fa-xmark"></i><span class="sr-only">Close
+                            modal</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-experts" src="./images/CarlosNuñez.png" alt="Image of Carlos Núñez Mercado"
+                            aria-hidden="true">
+                    </div>
+                    <p class="texto-morado m-2rem text-center" lang="es"><b>Carlos Núñez Mercado</b></p>
+                    <p class="mb-0">
+                        Head of the online BA in ELT Department since 2019, teaches at the BA in English Language and the online BA in ELT of the <i>Universidad Veracruzana</i> in Mexico. He holds an MA in TEFL and a PhD in Language Studies and Applied Linguistics, both from the <i>Universidad Veracruzana</i>. He has over 10 years of experience teaching EFL students in both high school and higher education levels. He also holds a C2 level language certification from the University of Cambridge. He has participated in the online BA in ELT COAPEHUM certifications and redesign committees.<br><br>
+                        He has supervised numerous students’ research projects from the BA and MA programmes of the university; his research interests and publications focus on teaching linguistic and communicative skills, the use of ICT in ELT, and Corpus Linguistics methods in language studies. He is a member of the Research Group Applied Linguistics in English Language Teaching and Learning (UV-CA-543). He has presented a number of papers at national and international conferences.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close--texto" data-dismiss="modal"
+                        aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="modal fade" id="modal-experto-3" tabindex="-1" aria-labelledby="modal-experto-3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content modal-content--expertos">
+                <div class="modal-header modal-header--expertos">
+                    <button type="button" class="btn-close btn-close--expertos" data-dismiss="modal"
+                        aria-label="Close"><i class="fa-solid fa-xmark"></i><span class="sr-only">Close
+                            modal</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-experts " src="images/DanielGidi.png" alt="Foto de Daniel Jacobo Gidi Martí" aria-hidden="true">
+                    </div>
+                    <p class="texto-morado m-2rem text-center" lang="es"><b>Daniel Jacobo Gidi Martí</b></p>
+                    <p class="mb-0">
+                        BA in English Language Teaching, MA in Teaching English as a Foreign Language and PhD in Educational Research from the <i>Universidad Veracruzana</i>. He has taught for more than 10 years in public and private educational institutions. He obtained his first scientific publication in the journal Teaching Innovations of the University of Belgrade, Serbia. His main line of research is student-centred English language learning and he belongs to the Research Group "Linguistics and Translation" of the <i>Universidad Veracruzana</i>.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close--texto" data-dismiss="modal"
+                        aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="modal fade" id="modal-experto-4" tabindex="-1" aria-labelledby="modal-experto-4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content modal-content--expertos">
+                <div class="modal-header modal-header--expertos">
+                    <button type="button" class="btn-close btn-close--expertos" data-dismiss="modal"
+                        aria-label="Close"><i class="fa-solid fa-xmark"></i><span class="sr-only">Close
+                            modal</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center">
+                        <img class="img-experts " src="images/PatriciaNuñez.png" alt="Foto de Patricia Núñez Mercado" aria-hidden="true">
+                    </div>
+                    <p class="texto-morado m-2rem text-center" lang="es"><b>Patricia Núñez Mercado</b></p>
+                    <p class="mb-0">
+                        Holds a BA in English, a BA in French, a TEFL MA from the <i>Universidad Veracruzana</i>, and a PhD in Applied Linguistics from the University of Southampton. She is a full-time lecturer at the School of Languages of the <i>Universidad Veracruzana</i>, teaching at the BA in English, the online BA in TEFL, the TEFL MA, and the Foreign Language Department. She was the coordinator of the English academy from 2005 to 2011, the head of the English BA Department from 2011 to 2013, and the coordinator of the tutorial system of the same BA programme from 2013 to 2015. She has supervised numerous students’ research projects in all the programmes she teaches.<br><br>
+                        She belonged to the Standardized Exams committee of the English BA from 2002 to 2012, and the EXAVER designers’ committee in 2015. She has also taught teacher training courses and workshops for the School of Languages academic staff and has participated in the certification and redesign committees of the BA and MA programmes. She holds a C2 language certification from the University of Cambridge and was a member of the CENEVAL committee for the BA in ELT certification exam. She coordinates the Research Group Applied Linguistics in English Language Teaching and Learning (UV-CA-543) and is a member of the RECALE (a national network for research groups in foreign languages). Her research interests are L2 literacy in higher education, English language learning and teaching, and research processes. She has participated in numerous national and international conferences, both as a presenter and attendee. She has published several book chapters and journal articles, coordinated several books on the ELT training area, and co-authored a research report writing handbook for beginners.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close--texto" data-dismiss="modal"
+                        aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Help -->
+    <!-- modal help -->
+    <div class=" modal fade" id="methods-help" tabindex="-1" aria-labelledby="methods-help" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content modal-content--expertos">
+                <div class="modal-header modal-header--expertos">
+                    <button type="button" class="btn-close btn-close--expertos" data-dismiss="modal" aria-label="Close"
+                        accesskey="X"><i class="fa-solid fa-xmark"></i><span class="sr-only">Close
+                            modal</span></button>
+                </div>
+                <div class="modal-body" lang="es">
+                    <!-- <div class="container"> -->
+                    <div class="text-center mb-3">
+                        <p>
+                            <strong>Información de ayuda</strong>
+                        </p>
+                    </div>
+
+                    <p class="">
+                        Para navegar dentro de la Experiencia Educativa, utiliza los siguientes atajos:
+                    </p>
+
+                    <p class="mb-0" lang="en"><b><i>Windows</i></b></p>
+
+                    <ul class="mb-2rem pl-1_4">
+                        <li>Abrir menú principal: Alt + M</li>
+                        <li>Cerrar menú principal: Alt + C</li>
+                    </ul>
+
+                    <p class="mb-0" lang="en"><b><i>MacOS</i></b></p>
+
+                    <ul class=" pl-1_4 mb-0">
+                        <li>Abrir menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+                        <li>Cerrar menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+
+                    </ul>
+                    <!-- </div> -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close--texto" data-dismiss="modal"
+                        aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin modal Help -->
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/menu-component.js"></script>
+
+    <!--Cuadros-->
+
+    <!-- <script src="js/modernizr.custom.79639.js"></script> -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+</body>
+</html>

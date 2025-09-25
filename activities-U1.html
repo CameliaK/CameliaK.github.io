@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unit 1. Activities</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap" rel="stylesheet" />
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/activities-U1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Librería para animar recursos animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <div class="sr-only" lang="es">
+        <p>
+            Para acceder a la información de ayuda de esta Experiencia Educativa en <i lang="en">Windows</i> presiona
+            las teclas Alt + i, en <i lang="en">MacOS</i> presiona las teclas <i lang="en">Control</i> + <i
+                lang="en">Option</i> + i
+            Para cerrar la ventana con la información de ayuda en <i lang="en">Windows</i> presiona las teclas Alt + X,
+            en <i lang="en">MacOS</i> presiona la tecla Esc
+        </p>
+
+        <p>
+            Para navegar dentro de la Experiencia Educativa, utiliza los siguientes atajos:
+        </p>
+
+        <p class="mb-0" lang="en"><b><i>Windows</i></b></p>
+        <ul class="mb-2rem pl-1_4">
+            <li>Abrir menú principal: Alt + M</li>
+            <li>Cerrar menú principal: Alt + C</li>
+            <li><i lang="en">Forum A:</i>&nbsp; Alt + 1</li>
+            <li><i lang="en">Forum B:</i>&nbsp; Alt + 2</li>
+            <li><i lang="en">Activity 01:</i>&nbsp; Alt + 3</li>
+            <li><i lang="en">Forum C:</i>&nbsp; Alt + 4</li>
+            <li><i lang="en">Forum D:</i>&nbsp; Alt + 5</li>
+        </ul>
+
+        <p class="mb-0" lang="en"><b><i>MacOS</i></b></p>
+        <ul class=" pl-1_4 mb-0">
+            <li>Abrir menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+            <li>Cerrar menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+            <li><i lang="en">Forum A:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 1</li>
+            <li><i lang="en">Forum B:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 2</li>
+            <li><i lang="en">Activity 01:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 3</li>
+            <li><i lang="en">Forum C:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 4</li>
+            <li><i lang="en">Forum D:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 5</li>
+        </ul>
+    </div>
+
+    <!-- Contenedor Botón ayuda -->
+    <div class="visible-solo-escritorio container-help" aria-hidden="true">
+        <button accesskey="i" class="help  animate__animated animate__bounceIn animate-bounceIn animate__slower
+            waves-effect waves-light" data-toggle="modal" data-target="#methods-help" tabindex="-1">
+            <!-- <i class="bx bxs-info-circle"></i> -->
+            <img class="w-100" src="./images/help/info-A02.png" Alt="Support image">
+        </button>
+    </div>
+    <!-- Fin contenedor botón ayuda -->
+    <!-- INICIA BOTON NAVEGACION LATERAL -->
+    <button accesskey="M" type="button" class="btn btn-info js-sidebar__collapse sidebar__collapse" aria-pressed="false"
+        aria-expanded="false" aria-label="Expand side menu">
+        <span>Menu</span><span aria-hidden="true">&nbsp;&nbsp;</span><i class="fas fa-bars"></i>
+    </button>
+    <!-- TERMINA BOTON NAVEGACION LATERAL -->
+
+    <!-- INICIA PLECA -->
+    <div class="js-pleca pleca" aria-hidden="true">
+        <a target="_blank" rel="noopener noreferrer" class="pleca__uv" href="https://uv.mx/">Universidad Veracruzana
+            <!-- <span class="sr-only">opens a new tab</span> --></a>
+    </div>
+    <!-- TERMINA PLECA -->
+
+
+
+    <!-- INICIA NAVEGACIÓN LATERAL -->
+    <!--  -->
+    <navbar class="sidebar" role="navigation" aria-label="Menu" name="Menu">
+        <div class="sidebar__encabezado">
+            <button accesskey="C" aria-details="Close side menu" class="btn btn-link sidebar__dismiss">
+                <i class="fas fa-arrow-right sidebar__icono"></i><span class="sr-only">Close navigation menu</span>
+            </button>
+        </div>
+        <menu-component></menu-component>
+
+        <div class="sidebar__encabezado">
+            <button aria-details="Cerrar menú lateral de navegación" class="btn btn-link sidebar__dismiss">
+                <i aria-hidden="true" class="fas fa-arrow-right sidebar__icono"></i><span class="sr-only">Close
+                    navigation menu</span>
+            </button>
+        </div>
+    </navbar>
+    <!-- TERMINA NAVEGACIÓN LATERAL -->
+
+    <header style="z-index: 500;" class="fixed-top encabezado">
+        <div class="container visible-solo-escritorio">
+            <b class="navbar-brand header__brand" aria-hidden="true">Unit 1. Activities</b>
+        </div>
+
+        <div class="container visible-solo-movil">
+            <span class="navbar-brand header__brand" aria-hidden="true"><span
+                    class="visible-solo-escritorio"></span>Unit 1. Activities</span>
+        </div>
+    </header>
+
+    <main class="contenido-principal container">
+        <div class="seccion">
+            <!-- topic__titulo -->
+            <h1 class="font__activities color__blue bold mb-2rem "><span>Unit 1. Activities</span></h1>
+        </div>
+
+        <section class="seccion">
+            <div class="ContainerActivity ">
+                <div class="activities ">
+                    <div class="actividad-titulo img-foro"><img src="images/forum_icon.png" alt="Unit 1 - Activity 01"
+                            aria-hidden="true">
+                        <h2 accesskey="1" tabindex="0" class="mb-0 color__purple">
+                            <b>TEYL Forum A. Introduction forum</b>
+                            <span aria-hidden="true">&nbsp;</span>
+                        </h2>
+                    </div>
+
+                    <p class="instrucciones mb-0 "><b>Instructions:</b></p>
+                    <ol class="mb-0 pl-1_3">
+                        <li>Welcome to the TEYL course. In this forum, you'll have to share with the group:
+                            <ol class="pl-1_3 lw-alpha">
+                                <li>Your name.</li>
+                                <li>English interests.</li>
+                                <li>The reasons why you took this learning experience.</li>
+                                <li>Expectations you have got from this course.</li>
+                                <li>Drop by to say hello to at least ONE of your classmates.</li>
+                            </ol>
+                        </li>
+                        <li>Thank you for your commitment and group work!</li>
+                    </ol>
+                </div>
+            </div>
+
+            <hr class="separador-principal" aria-hidden="true">
+
+            <div class="ContainerActivity ">
+                <div class="activities ">
+                    <div class="actividad-titulo img-foro"><img src="images/forum_icon.png" alt="Unit 1 - Activity 01"
+                            aria-hidden="true">
+                        <h2 accesskey="2" tabindex="0" class="mb-0 color__purple">
+                            <b>TEYL Forum B. Krashen’s hypotheses</b>
+                            <span aria-hidden="true">&nbsp;</span>
+                        </h2>
+                    </div>
+                    <p><b>Score: 5 %</b></p>
+
+                    <p class="instrucciones mb-0 "><b>Instructions:</b></p>
+                    <ol class="mb-0 pl-1_3 ">
+                        <li>Read the document titled <a
+                                href="downloads/activitiesU1/Abukhattala(2013)Krashens_five_hyphotheses.pdf"
+                                download="">
+                                Krashen five hyphoteses.
+                                <span class="sr-only">PDF file</span>
+                            </a></li>
+                        <li>In a single paragraph, state the differences between language learning and language
+                            acquisition according to Krashen (1994).</li>
+                        <li>Briefly discuss Krashen's five hypotheses. Try to argue their potential suitability for your
+                            teaching context.</li>
+                        <li>Give critical thinking related feedback to at least ONE of your classmates.</li>
+                        <li>Download the rubric.</li>
+                    </ol>
+                    <div class="btn-right mt-2rem">
+                        <a href="./downloads/activitiesU1/TEYL-Rubric-ForumB.docx" download=""
+                            class="btn-exp text-center ">Rubric<span class="sr-only">Word document</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="separador-principal" aria-hidden="true">
+
+            <div class="ContainerActivity ">
+                <div class="activities ">
+                    <div class="actividad-titulo"><img src="images/activity_Icon.png" alt="Unit 1 - Activity 01"
+                            aria-hidden="true">
+                        <h2 accesskey="3" tabindex="0" class="mb-0 texto-morado"><b>TEYL Activity 01. Observing rituals
+                                /
+                                routines</b>
+                            <span aria-hidden="true">&nbsp;</span>
+                        </h2>
+                    </div>
+                    <p><b>Score: 10 %</b></p>
+
+                    <p class="instrucciones mb-0 "><b>Instructions:</b></p>
+                    <ol class="mb-0 pl-1_3">
+                        <li>Go to a real classroom other than yours.
+                            <ul class="pl-1_3 disc">
+                                <li>Ask a colleague for letting you observe their classroom and their children by using
+                                    a consent form.</li>
+                                <li>Design your own consent form for asking for permission to observe and add it to your
+                                    task, with the corresponding signature, as an appendix.</li>
+                            </ul>
+                        </li>
+                        <li>After arranging a date to observe, download the file and fill in the blanks with insighful
+                            information that covers the sociocultural theory of Bruner.</li>
+
+
+                        <div class="btn-center m-2rem">
+                            <a href="./downloads/activitiesU1/TEYL-U1-ACT01.docx" download=""
+                                class="btn-exp text-center ">TEYL Activity
+                                01<span class="sr-only">Word document</span>
+                            </a>
+                        </div>
+
+                        <li>At the bottom of the sheet, you need to collect the signature and full name of the teacher
+                            your observe. Follow your ethical and professional principles for doing this task.</li>
+                        <li>Download the rubric.</li>
+                        <div class="btn-right m-2rem">
+                            <a href="./downloads/activitiesU1/TEYL-Rubric-ACT01.docx" download=""
+                                class="btn-exp text-center ">Rubric
+                                <span class="sr-only">Word document</span>
+                            </a>
+                        </div>
+                        <li>Once you finish this activity, save and name it
+                            <b>TE<wbr>YL<wbr>01<wbr>_<wbr>Name<wbr>Sur<wbr>name,</b> and upload it in
+                            Eminus
+                            in the corresponding section in <i lang="es">‘Actividades’</i>.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <hr class="separador-principal" aria-hidden="true">
+
+            <div class="ContainerActivity ">
+                <div class="activities ">
+                    <div class="actividad-titulo img-foro"><img src="images/forum_icon.png" alt="Unit 1 - Activity 01"
+                            aria-hidden="true">
+                        <h2 accesskey="4" tabindex="0" class="mb-0 color__purple">
+                            <b>TEYL Forum C. Piaget’s active learning</b>
+                            <span aria-hidden="true">&nbsp;</span>
+                        </h2>
+                    </div>
+                    <p><b>Score: 5 %</b></p>
+
+                    <p class="instrucciones mb-0 "><b>Instructions:</b></p>
+                    <p class="mb-0">According to Cameron (2010, p. 2), 'it is through taking action that learning
+                        occurs'. After
+                        reading Cameron's paper (pp. 2-5):</p>
+                    <ol class="mb-0 pl-1_3 ">
+                        <li>Write and share a concrete definition of ACTIVE LEARNING.</li>
+                        <li>Plus, provide a detailed example of how children may learn in your language classroom
+                            through EXPLORATION; state clearly how assimmilation and accommodation might take place in
+                            your example.</li>
+                        <li>Finally, read and comment on at least two classmates' definitions of ACTIVE LEARNING and
+                            their examples of learning through exploration; courteously comment on whether you agree,
+                            desagree or simply give your feedback.</li>
+                        <li>Download the rubric.</li>
+                    </ol>
+                    <div class="btn-right mt-2rem">
+                        <a href="./downloads/activitiesU1/TEYL-Rubric-ForumC.docx" download=""
+                            class="btn-exp text-center ">Rubric<span class="sr-only">Word document</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="separador-principal" aria-hidden="true">
+
+            <div class="ContainerActivity mb-2rem ">
+                <div class="activities ">
+                    <div class="actividad-titulo img-foro"><img src="images/forum_icon.png" alt="Unit 1 - Activity 01"
+                            aria-hidden="true">
+                        <h2 accesskey="5" tabindex="0" class="mb-0 color__purple">
+                            <b>TEYL Forum D. Vygotsky’s social constructivism</b>
+                            <span aria-hidden="true">&nbsp;</span>
+                        </h2>
+                    </div>
+                    <p><b>Score: 5 %</b></p>
+
+                    <p class="instrucciones mb-0 "><b>Instructions:</b></p>
+                    <p class="mb-0">According to Vygotsky, children will learn throughsocial interaction (with people),
+                        eventually internalising the use of language. Internalised language is that language available
+                        to a child to use without having to go through the step of mentally translating.</p>
+                    <ol class="mb-0 pl-1_3 ">
+                        <li>Participate in the forum by establishing what internalisation is (you might read Cameron
+                            again, or any other source of information, but make sure you give proper credit).</li>
+                        <li>Revise Cameron's reading again (2001, pp. 5-8) and write your own definition of what the
+                            Zone of Proximal Development ZPD (is p. 3). Plus, succinctly define the role you play as a
+                            teacher in enhancing children's ZPD (p. 4).</li>
+                        <li>Finally, give feedback to at least one of your classmates.</li>
+                        <li>Download the rubric.</li>
+                    </ol>
+                    <div class="btn-right mt-2rem">
+                        <a href="./downloads/activitiesU1/TEYL-Rubric-ForumD.docx" download=""
+                            class="btn-exp text-center ">Rubric<span class="sr-only">Word document</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <img class="visible-solo-escritorio img-footer" src="images/lis-e.png" aria-hidden="true" alt="LIS de la UV">
+        <img class="visible-solo-movil img-footer" src="images/lis-m.png" aria-hidden="true" alt="LIS de la UV">
+
+        <div class="pleca-celula" aria-hidden="true">
+            <img src="./images/icono-CDC.png" loading="lazy" alt="Logo de la Célula de Desarrollo de Contenidos">
+            <p>Elaborado por Célula de Desarrollo de Contenidos DGTI Xalapa.</p>
+        </div>
+    </footer>
+    <!-- modal help -->
+    <div class=" modal fade" id="methods-help" tabindex="-1" aria-labelledby="methods-help" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content modal-content--expertos">
+                <div class="modal-header modal-header--expertos">
+                    <button accesskey="X" type="button" class="btn-close btn-close--expertos bold" data-dismiss="modal"
+                        aria-label="Close">x<span class="sr-only">Close
+                            modal</span></button>
+                </div>
+                <div class="modal-body" lang="es">
+                    <!-- <div class="container"> -->
+                    <div class="text-center mb-3">
+                        <p>
+                            <strong>Información de ayuda</strong>
+                        </p>
+                    </div>
+
+                    <p class="">
+                        Para navegar dentro de la Experiencia Educativa, utiliza los siguientes atajos:
+                    </p>
+
+                    <p class="mb-0" lang="en"><b><i>Windows</i></b></p>
+                    <ul class="mb-2rem pl-1_4">
+                        <li>Abrir menú principal: Alt + M</li>
+                        <li>Cerrar menú principal: Alt + C</li>
+                        <li><i lang="en">Forum A:</i>&nbsp; Alt + 1</li>
+                        <li><i lang="en">Forum B:</i>&nbsp; Alt + 2</li>
+                        <li><i lang="en">Activity 01:</i>&nbsp; Alt + 3</li>
+                        <li><i lang="en">Forum C:</i>&nbsp; Alt + 4</li>
+                        <li><i lang="en">Forum D:</i>&nbsp; Alt + 5</li>
+                    </ul>
+
+                    <p class="mb-0" lang="en"><b><i>MacOS</i></b></p>
+                    <ul class=" pl-1_4 mb-0">
+                        <li>Abrir menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + M</li>
+                        <li>Cerrar menú principal: <i lang="en">Control</i> + <i lang="en">Option</i> + C</li>
+                        <li><i lang="en">Forum A:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 1</li>
+                        <li><i lang="en">Forum B:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 2</li>
+                        <li><i lang="en">Activity 01:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 3</li>
+                        <li><i lang="en">Forum C:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 4</li>
+                        <li><i lang="en">Forum D:</i>&nbsp; <i lang="en">Control</i> + <i lang="en">Option</i> + 5</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-close--texto" data-dismiss="modal"
+                        aria-label="Close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN MODALES -->
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/js/mdb.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script src="js/menu-component.js"></script>
+
+
+</body>
+
+</html>
