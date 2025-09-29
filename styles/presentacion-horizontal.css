@@ -9,6 +9,7 @@
     box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 1px 11px -1px rgba(0,0,0,0.75);
+    position: relative;
 }
 
 .contenedor-botones{
@@ -16,7 +17,6 @@
     background: linear-gradient(76deg,#caebd4 0%, #b9c7e3 80%);
     background: -webkit-linear-gradient(76deg,#caebd4 0%, #b9c7e3 80%);
     background: -moz-linear-gradient(76deg,#caebd4 0%, #b9c7e3 80%);
-    min-height: 13%;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -62,18 +62,6 @@
     }
 }
 
-.swiper-slide {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 1.25em;
-    font-weight: normal;
-    color: #000;
-    height: 87% !important;
-    padding: 2rem;
-}
-
 .text-grey{
     color: #393E41;
     font-weight: 700;
@@ -81,271 +69,112 @@
     right: 2rem;
     bottom: 1rem;
 }
-/**/
+
 .instruccion-color-verde{
     color: #007C32;
 }
 .text-azul{ color:#2B5DAA; font-weight:bold; }
-/* --- Fix: que el texto no quede debajo de los botones del slider --- */
-.swiper { position: relative; }
 
-/* Altura real de la barra (ajusta si la hiciste más alta) */
-:root { --u11-swiper-nav-h: 96px; }
-
-/* El slide ya no usa % fijo; que crezca y tenga espacio inferior */
-.swiper-slide{
-  height: auto !important;
-  min-height: calc(100% - var(--u11-swiper-nav-h)); /* asegura altura visible */
-  padding-bottom: calc(var(--u11-swiper-nav-h) + 16px); /* aire para que no tape */
-  overflow-y: auto; /* si el texto es larguito, aparece scroll interno */
+/* Variables */
+:root { 
+    --u11-swiper-nav-h: 96px; 
 }
 
-/* La barra de botones con altura fija en lugar de min-height */
-.contenedor-botones{
-  height: var(--u11-swiper-nav-h);
-  min-height: 0;         /* ya no necesaria */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-/* Ajusta padding interno de cada slide */
-.swiper-slide .swiper-content {
-  padding: 1.25rem 1.5rem 4.5rem; /* top right bottom */
-  box-sizing: border-box;
+/* === CONFIGURACIÓN ESPECÍFICA PARA .mySwiper === */
+.mySwiper { 
+    --u11-swiper-nav-h: 96px;
+    position: relative;
 }
 
-/* Listas dentro de slides */
-.swiper-slide ul {
-  margin-top: .5rem;    /* reduce espacio arriba */
-  margin-bottom: 1rem;  /* espacio abajo */
-  padding-left: 1.25rem;/* indentado de viñetas */
+.mySwiper .swiper { 
+    position: relative; 
 }
 
-/* Cada <li> con espacio compacto */
-.swiper-slide ul li {
-  margin-bottom: .35rem; /* menos separación entre viñetas */
-}
-
-/* La cita o referencia final un poquito separada */
-.swiper-slide p:last-of-type {
-  margin-top: .75rem;
-}
-
-/* ====== PARCHE: slides no tapados por la barra + listas más compactas ====== */
-
-/* Altura real de la barra (ajústala si la haces más alta) */
-:root { --u11-swiper-nav-h: 96px; }
-
-/* La barra de navegación fija al fondo del swiper */
-.contenedor-botones{
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: var(--u11-swiper-nav-h);
-  min-height: 0;
-}
-
-/* El contenedor general debe ser relativo para posicionar la barra */
-.swiper { position: relative; }
-
-/* Slide: QUITAR centrado, alinear arriba, y reservar espacio para la barra */
-.swiper-slide{
-  /* anula el centrado que traías */
-  display: block !important;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-
-  /* altura correcta y espacio inferior para la barra */
-  height: auto !important;
-  min-height: calc(100% - var(--u11-swiper-nav-h)) !important;
-  padding: 1.25rem 1.5rem calc(var(--u11-swiper-nav-h) + 20px) !important;
-  box-sizing: border-box;
-  overflow-y: auto;   /* si el contenido es largo, scroll dentro del slide */
-}
-
-/* Si usas un wrapper interno para el texto, dale padding normal (opcional) */
-.swiper-slide .swiper-content{
-  padding: 0; /* ya pusimos padding en el slide */
-  box-sizing: border-box;
-}
-
-/* --- Espacios de listas y bullets compactos --- */
-
-/* Menos espacio entre el párrafo introductorio y la lista */
-.swiper-content p + ul,
-.swiper-slide p + ul {
-  margin-top: .5rem !important;
-}
-
-/* Listas más compactas dentro del slide */
-.swiper-slide ul {
-  margin-top: .5rem !important;
-  margin-bottom: 1rem !important;
-  padding-left: 1.25rem !important;
-}
-
-/* Menos separación entre bullets */
-.swiper-slide ul li { 
-  margin-bottom: .35rem !important;
-  line-height: 1.4 !important;
-}
-
-/* La cita/referencia separada un poquito del bloque anterior */
-.swiper-slide p:last-of-type { 
-  margin-top: .75rem !important; 
-}
-/* --- Compactar viñetas en slides --- */
-.swiper-slide ul {
-  margin-top: .25rem !important;    /* reduce espacio encima de la lista */
-  margin-bottom: .25rem !important; /* reduce espacio debajo de la lista */
-  padding-left: 1.2rem !important;  /* mantiene indentación bonita */
-}
-
-.swiper-slide ul li {
-  margin-bottom: .25rem !important; /* menos espacio entre cada viñeta */
-  line-height: 1.4 !important;      /* líneas más cerradas */
-}
-
-/* --- Ajustar párrafos dentro de slides --- */
-.swiper-slide p {
-  margin-top: .25rem !important;
-  margin-bottom: .25rem !important;
-}
-
-/* --- Alinear referencia a la derecha --- */
-.swiper-slide p.ref-cita {
-  text-align: right;
-  font-style: italic;    /* opcional, se ve más “cita” */
-  margin-top: .5rem;     /* separada de las viñetas */
-}
-
-/* Solo para párrafos marcados como intro */
-.parrafo-intro {
-  margin-bottom: 1.5rem;  /* más espacio */
-}
-
-/* Solo para párrafos justo antes de listas */
-.parrafo-prelista {
-  margin-bottom: .25rem; /* espacio más reducido */
-}
-/* ==== Overwrite para el slider (va al FINAL de tus CSS) ==== */
-
-/* Asegura layout del slide y espacio libre para la barra */
-.mySwiper { --u11-swiper-nav-h: 96px; }                /* ajusta si tu barra es más alta */
-.mySwiper .swiper { position: relative; }
 .mySwiper .contenedor-botones{
-  position:absolute; left:0; right:0; bottom:0;
-  height:var(--u11-swiper-nav-h); min-height:0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: var(--u11-swiper-nav-h);
+    min-height: 0;
 }
-.mySwiper .swiper-slide{
-  display:block !important;
-  align-items:flex-start !important;
-  justify-content:flex-start !important;
-  height:auto !important;
-  min-height:calc(100% - var(--u11-swiper-nav-h)) !important;
-  padding:1.25rem 1.5rem calc(var(--u11-swiper-nav-h) + 20px) !important;
-  box-sizing:border-box;
-  overflow-y:auto;
-}
-.mySwiper .swiper-slide .swiper-content{ padding:0 !important; }
 
-/* --- Espaciados por clase (aplicas en tu HTML) --- */
+/* SLIDES - Centrado vertical */
+.mySwiper .swiper-slide {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+    height: auto !important;
+    min-height: calc(100% - var(--u11-swiper-nav-h)) !important;
+    
+    padding-top: 2rem !important;
+    padding-bottom: calc(var(--u11-swiper-nav-h) + 2rem) !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    
+    box-sizing: border-box !important;
+    overflow-y: auto !important;
+    
+    border-radius: 18px;
+    font-size: 1.25em;
+    font-weight: normal;
+    color: #000;
+}
+
+.mySwiper .swiper-slide .swiper-content {
+    width: 100%;
+    max-width: 920px;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left;
+}
+
+/* --- Espaciados de texto --- */
 .mySwiper .swiper-slide p.parrafo.parrafo-intro{
-  margin-bottom:1.5rem !important;     /* más aire tras el primer párrafo */
-}
-.mySwiper .swiper-slide p.parrafo.parrafo-prelista{
-  margin-top:.75rem !important;         /* un poquito de aire arriba */
-  margin-bottom:.25rem !important;      /* menos aire antes de las viñetas */
-}
-/* si el párrafo va justo antes de la lista, aún más pegado */
-.mySwiper .swiper-slide p.parrafo.parrafo-prelista + ul{
-  margin-top:.25rem !important;
+    margin-bottom: 1.5rem !important;
 }
 
-/* Listas compactas dentro del slide */
-.mySwiper .swiper-slide ul{
-  margin:.25rem 0 .25rem 1.25rem !important; /* top right bottom left */
-  padding-left:1.25rem !important;           /* identación */
+.mySwiper .swiper-slide p.parrafo.parrafo-prelista{
+    margin-top: .75rem !important;
+    margin-bottom: .25rem !important;
 }
+
+.mySwiper .swiper-slide p.parrafo.parrafo-prelista + ul{
+    margin-top: .25rem !important;
+}
+
+/* Listas compactas */
+.mySwiper .swiper-slide ul{
+    margin: .25rem 0 .25rem 1.25rem !important;
+    padding-left: 1.25rem !important;
+}
+
 .mySwiper .swiper-slide ul li{
-  margin-bottom:.25rem !important;
-  line-height:1.45 !important;
+    margin-bottom: .25rem !important;
+    line-height: 1.45 !important;
 }
 
 /* Cita a la derecha */
 .mySwiper .swiper-slide p.parrafo.ref-cita{
-  text-align:right !important;
-  font-style:italic;
-  margin-top:.5rem !important;
+    text-align: right !important;
+    margin-top: .5rem !important;
 }
 
-/* El slide scrollea; mantenlo así */
-.swiper-slide{
-  position: relative;
-  overflow-y: auto;
-  padding-bottom: calc(var(--u11-swiper-nav-h) + 28px); /* ya lo tienes */
-}
-
-/* Contador fijo dentro del área scrolleable, centrado y por encima de la barra */
-.slide-counter{
-  position: sticky;                           /* <— clave */
-  bottom: calc(var(--u11-swiper-nav-h) + 8px);
-  left: 0;
-  right: 0;
-  transform: none;                            /* ya no usamos translate */
-  text-align: center;
-  margin: 0;
-  font-weight: 700;
-  color: #2f2f2f;
-  z-index: 5;
-  pointer-events: none;
-  /* opcional, para que se lea sobre el texto: */
-  text-shadow: 0 1px 2px rgba(255,255,255,.7);
-}
-/* === Contador fijo centrado sobre la barra === */
-.mySwiper{ --u11-swiper-nav-h:96px; } /* ajusta si tu barra cambia de alto */
-
-.mySwiper .contenedor-botones{
-  position:absolute; left:0; right:0; bottom:0;
-  height:var(--u11-swiper-nav-h); min-height:0;
-}
-
-.mySwiper .swiper-slide{
-  position:relative;
-  /* espacio libre para que el contador no se tape ni tape el texto */
-  padding-bottom:calc(var(--u11-swiper-nav-h) + 36px) !important;
-}
-
-.mySwiper .slide-counter{
-  position:absolute;
-  left:50%;
-  bottom:calc(var(--u11-swiper-nav-h) + 8px);
-  transform:translateX(-50%);
-  margin:0;
-  font-weight:700;
-  color:#2f2f2f;
-  pointer-events:none;
-  z-index:10;
-}
-
-/* (opcional) si tienes una regla general que toca a todos los <p> del slide,
-   evita que afecte al contador */
-.mySwiper .swiper-slide p.slide-counter{ margin:0 !important; }
-
-/* === Contador global fijo para el slider === */
-.mySwiper{ --u11-swiper-nav-h:96px; position:relative; } /* ajusta si tu barra es más alta */
+/* Contador global */
 .mySwiper .u11-counter{
-  position:absolute;
-  left:50%;
-  bottom:calc(var(--u11-swiper-nav-h) + 8px); /* 8px arriba de la barra */
-  transform:translateX(-50%);
-  font-weight:700;
-  color:#2f2f2f;
-  margin:0;
-  z-index:20;
-  pointer-events:none;
+    position: absolute;
+    left: 50%;
+    bottom: calc(var(--u11-swiper-nav-h) + 8px);
+    transform: translateX(-50%);
+    font-weight: 700;
+    color: #2f2f2f;
+    margin: 0;
+    z-index: 20;
+    pointer-events: none;
 }
 
-/* por si quedó alguna regla vieja del contador anterior */
-.mySwiper .slide-counter{ display:none !important; }
-
+.mySwiper .slide-counter{ 
+    display: none !important; 
+}
